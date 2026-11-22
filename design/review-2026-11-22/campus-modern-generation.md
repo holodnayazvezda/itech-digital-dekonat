@@ -1,7 +1,0 @@
-# Second fictional campus building
-
-Built-in imagegen, style reference only: solution/public/services/campus-main-view.png. Saved asset: solution/public/services/campus-modern-view.png. Generated fictional architecture, not a real university photograph. Replaces the remaining illustrated card, currently labelled Корпус A in the app.
-
-Final prompt:
-
-Use case: photorealistic architectural visualization. Asset type: wide landscape university booking card, 3:2 composition. Generate a DIFFERENT fictional university academic building from the one in the reference. Reference image is ONLY for photographic style, warm summer daylight, natural trees and landscaping; DO NOT repeat its limestone facade, classical central portico or curved wing. New building: contemporary four-story teaching and research building with warm red-brown brick rectangular volumes, a tall recessed glass atrium connecting two wings, charcoal metal window frames and restrained pale concrete lintels. Clear straight geometric forms, slightly offset asymmetrical wings, flat roofs, broad welcoming entrance at ground level, believable campus architecture, not apartments or office tower. Right-front three-quarter exterior photo from a pedestrian campus plaza. The entire building fits in frame with margin above the roof and below entrance steps. Mature leafy trees frame the top corners, light stone paving, low planting beds, soft blue sky and warm afternoon sun, realistic architectural photography matching the reference quality. No people, text, signs, logos, emblems or watermarks.
