@@ -34,7 +34,7 @@ codex mcp add tinki-campus --url http://127.0.0.1:8080/api/campus/mcp --bearer-t
 
 Для доверенного MCP-хоста есть адаптер, который строит каталог из OpenAPI кампуса. Он вызывает операции от имени того же кабинета, включая управление парами, задачи деканата, возврат и повторную подачу заявок. Хосту следует подтверждать операции записи с пользователем перед вызовом. Аннотации `readOnlyHint` и `destructiveHint` помогают отличить их от чтения. API проверяет роль и поля каждого запроса. [Спецификация инструментов MCP](https://modelcontextprotocol.io/specification/2025-11-25/server/tools)
 
-Запустите из `solution/` с переменной `CAMPUS_MCP_TOKEN`:
+Запустите из корня репозитория с переменной `CAMPUS_MCP_TOKEN`:
 
 ```sh
 server/.venv/bin/python -m server.mcp
@@ -46,7 +46,7 @@ server/.venv/bin/python -m server.mcp
 {
   "mcpServers": {
     "irishka-campus": {
-      "command": "/absolute/path/solution/server/.venv/bin/python",
+      "command": "/absolute/path/itech-digital-dekonat/server/.venv/bin/python",
       "args": ["-m", "server.mcp"],
       "cwd": "/absolute/path/solution",
       "env": { "CAMPUS_MCP_ORIGIN": "http://127.0.0.1:8000" }

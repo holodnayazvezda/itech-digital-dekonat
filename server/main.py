@@ -61,7 +61,7 @@ tags = {
     "Связь": "Сообщения, письма и подписки Web Push.",
 }
 app = FastAPI(
-    title="Атлас кампуса · API цифрового деканата",
+    title="Цифровой деканат iTech · API",
     version="1.0.0",
     lifespan=lifespan,
     docs_url=None,
@@ -93,7 +93,7 @@ app.mount(
 def swagger():
     return get_swagger_ui_html(
         openapi_url="/openapi.json",
-        title="Атлас кампуса · Swagger UI",
+        title="Цифровой деканат iTech · Swagger UI",
         swagger_js_url="/docs/assets/swagger-ui-bundle.js",
         swagger_css_url="/docs/assets/swagger-ui.css",
         swagger_favicon_url="/docs/assets/favicon-32x32.png",
