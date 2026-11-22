@@ -1,0 +1,47 @@
+{
+  "name": "campus-atlas",
+  "version": "1.0.0",
+  "description": "Цифровой деканат · Vue Router и экраны React",
+  "scripts": {
+    "dev": "node scripts/dev.js",
+    "map:check": "node scripts/install-campus-map.js check",
+    "map:install": "node scripts/install-campus-map.js install",
+    "sync:rooms": "node scripts/sync-rooms.js",
+    "search:install": "node scripts/install-search-model.js",
+    "predev": "npm run sync:rooms && npm run search:install",
+    "prebuild": "npm run sync:rooms && npm run search:install",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node --test test/*.test.js",
+    "dev:client": "vite",
+    "dev:server": "../server/.venv/bin/uvicorn server.main:app --app-dir .. --reload --reload-dir ../server --reload-exclude .venv",
+    "start": "../server/.venv/bin/uvicorn server.main:app --app-dir ..",
+    "test:e2e": "playwright test"
+  },
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "@fontsource-variable/geologica": "^5.3.0",
+    "@fontsource-variable/golos-text": "^5.3.0",
+    "@fontsource-variable/nunito": "^5.3.0",
+    "@fontsource/ibm-plex-mono": "^5.3.0",
+    "@huggingface/transformers": "^4.3.2",
+    "@mdi/js": "^7.4.47",
+    "@preact/signals-react": "^3.12.0",
+    "lucide-react": "^1.77.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1",
+    "vue": "3.5.46",
+    "vue-router": "4.6.5"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "@vitejs/plugin-react": "^5.2.0",
+    "vite": "^7.3.8"
+  }
+}

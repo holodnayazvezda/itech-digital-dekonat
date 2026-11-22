@@ -47,7 +47,7 @@ def configuration():
         ):
             raise RuntimeError("Некорректный файл учётных записей")
     else:
-        demo = json.loads((Path(__file__).resolve().parent.parent / "shared" / "demo-access.json").read_text())
+        demo = json.loads((Path(__file__).resolve().parent / "assets" / "demo-access.json").read_text())
         hashed = password_hash(demo["password"])
         credentials = dict.fromkeys(PEOPLE, hashed)
     with connect() as con:

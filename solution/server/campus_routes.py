@@ -19,8 +19,8 @@ class RouteLookupError(ValueError):
 
 @lru_cache(maxsize=1)
 def _atlas():
-    root = Path(__file__).resolve().parents[1]
-    for directory in ("public", "dist"):
+    root = Path(__file__).resolve().parent
+    for directory in ("assets",):
         try:
             with (root / directory / "campus-map.json").open(encoding="utf-8") as file:
                 return json.load(file)["buildings"]

@@ -8,7 +8,7 @@ from .store import DATA, PEOPLE
 
 NAME_GROUPS = tuple(
     frozenset(group.split()) for group in json.loads(
-        (Path(__file__).resolve().parents[1] / "shared" / "search-names.json").read_text(encoding="utf-8")
+        (Path(__file__).resolve().parent / "assets" / "search-names.json").read_text(encoding="utf-8")
     )
 )
 TEACHER_IDS = {person["name"]: key for key, person in PEOPLE.items() if person["role"] == "teacher"}

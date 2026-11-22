@@ -4,17 +4,17 @@
 
 ## Архитектура и файлы
 
-Vue 3 и Vue Router управляют оболочкой и адресами страниц. React отображает экраны, Preact Signals хранит состояние кабинета, Vite собирает клиент. FastAPI проверяет JWT и права, выполняет операции и хранит изменения в SQLCipher. Один процесс `server.web:app` может обслуживать API и готовый `dist/`.
+Vue 3 и Vue Router управляют оболочкой и адресами страниц. React отображает экраны, Preact Signals хранит состояние кабинета, Vite собирает клиент. FastAPI проверяет JWT и права, выполняет операции и хранит изменения в SQLCipher. Один процесс `server.web:app` может обслуживать API и готовый `client/dist/`.
 
 | Путь | Назначение |
 | --- | --- |
-| `client/` | Точки входа, экраны React, оболочка Vue, темы, карта и клиент API |
-| `shared/` | Календарь, справочники, каталог услуг, правила поиска и серверные часы клиента |
-| `public/` | Иллюстрации, план кампуса JSON, манифест приложения и Service Worker |
+| `client/src/` | Точки входа, экраны React, оболочка Vue, темы, карта и клиент API |
+| `client/shared/` | Календарь, справочники, каталог услуг, правила поиска и серверные часы клиента |
+| `client/public/` | Иллюстрации, план кампуса JSON, манифест приложения и Service Worker |
 | `server/` | FastAPI, OpenAPI, авторизация, транзакции, файлы и уведомления |
 | `server/assets/` | Синхронизированные демоданные и шрифт для PDF |
-| `scripts/` | Подготовка справочников, локальной поисковой модели и карты |
-| `test/` | Модульные проверки JavaScript и браузерные сценарии Playwright |
+| `client/scripts/` | Подготовка справочников, локальной поисковой модели и карты |
+| `client/test/` | Модульные проверки JavaScript и браузерные сценарии Playwright |
 | `server/tests/` | Контракт API, права, конкурентные операции и сохранность данных |
 | `docs/` | Формат карты, интеграция Тинки и снимки интерфейса |
 
@@ -27,11 +27,12 @@ Vue 3 и Vue Router управляют оболочкой и адресами с
 ```sh
 python3 -m venv server/.venv
 server/.venv/bin/python -m pip install -r server/requirements.txt
+cd client
 npm ci
 npm run dev
 ```
 
-Клиент доступен на http://127.0.0.1:4197, API — на http://127.0.0.1:8000, Swagger — на http://127.0.0.1:8000/docs. Для отдельных процессов используйте `npm run dev:client` и `npm run dev:server`. В Windows замените путь к интерпретатору на `server/.venv/Scripts/python.exe`.
+Клиент доступен на http://127.0.0.1:4197, API — на http://127.0.0.1:8000, Swagger — на http://127.0.0.1:8000/docs. Для отдельных процессов используйте `npm run dev:client` и `npm run dev:server`. В Windows замените путь к интерпретатору на `../server/.venv/Scripts/python.exe` (из каталога клиента).
 
 ## Вход и роли
 
@@ -45,7 +46,7 @@ npm run dev
 | `dean-data` | Декан · Орлова Елена Николаевна |
 | `office` | Сотрудник деканата |
 
-Опубликованный пароль этих тестовых кабинетов — `CampusDemo2026!`. Данные находятся в `shared/demo-access.json`. Сервер проверяет пароль в обоих режимах. Сборка `VITE_CAMPUS_AUTH=password npm run build` показывает пустые поля и использует персональные аккаунты из `CAMPUS_ACCOUNTS_FILE`. Инфраструктурные секреты в клиент не передаются.
+Опубликованный пароль этих тестовых кабинетов — `CampusDemo2026!`. Данные находятся в `client/shared/demo-access.json`. Сервер проверяет пароль в обоих режимах. Сборка `VITE_CAMPUS_AUTH=password npm run build` показывает пустые поля и использует персональные аккаунты из `CAMPUS_ACCOUNTS_FILE`. Инфраструктурные секреты в клиент не передаются.
 
 ## Основные сценарии
 
@@ -73,10 +74,13 @@ npm run dev
 ## Сборка и проверки
 
 ```sh
+cd client
 npm test
 npm run build
-server/.venv/bin/python -m pip install -r server/requirements-dev.txt
+../server/.venv/bin/python -m pip install -r ../server/requirements-dev.txt
+cd ..
 server/.venv/bin/python -m pytest -q server/tests
+cd client
 npx playwright install chromium firefox webkit
 CAMPUS_TEST_IPHONE=1 npx playwright test --workers=1
 ```
@@ -85,4 +89,6 @@ CAMPUS_TEST_IPHONE=1 npx playwright test --workers=1
 
 Готовая сборка обслуживается командой `server/.venv/bin/python -m uvicorn server.web:app --host 127.0.0.1 --port 8080`. При раздельном размещении клиент получает адрес API из `VITE_API_ORIGIN`, сервер разрешает origin через `CAMPUS_CORS_ORIGINS`. Значения `VITE_*` входят в публичную сборку.
 
-[Клиент](client/README.md) · [Сервер, Swagger и настройки](server/README.md) · [Формат карты](docs/campus-map.md) · [Тинки и MCP](docs/irishka-mcp.md) · [Figma](../design/README.md)
+[Клиент](client/README.md) · [Сервер, Swagger и настройки](server/README.md) · [Формат карты](docs/campus-map.md) · [Тинки и MCP](docs/irishka-mcp.md) · [Figma](design/README.md)
+
+Макет и его локальная копия находятся в `design/`. Клиентские исходники — в `client/src/`, клиентские тесты — в `client/test/`, серверные — в `server/tests/`.

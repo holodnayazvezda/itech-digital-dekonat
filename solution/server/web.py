@@ -9,7 +9,7 @@ from starlette.exceptions import HTTPException as StaticHTTPException
 
 from .main import app
 
-DIST = Path(__file__).resolve().parent.parent / "dist"
+DIST = Path(__file__).resolve().parent.parent / "client" / "dist"
 
 
 class CampusFrontend(StaticFiles):
