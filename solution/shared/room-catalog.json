@@ -1,0 +1,2962 @@
+[
+ {
+  "id": "main",
+  "name": "Корпус B",
+  "floors": [
+   {
+    "id": "1",
+    "name": "1 этаж",
+    "rooms": [
+     {
+      "code": "Б-101",
+      "name": "Кабинет деловых игр",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Б-102",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Б-103",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "экран"
+     },
+     {
+      "code": "Б-104",
+      "name": "Лингафонный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Б-105",
+      "name": "Аудитория",
+      "kind": "class",
+      "seats": 32,
+      "equipment": "проектор"
+     },
+     {
+      "code": "Б-106",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 52,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Б-107",
+      "name": "Кабинет деловых игр",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Б-108",
+      "name": "Переговорная",
+      "kind": "work"
+     },
+     {
+      "code": "Б-109",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "экран"
+     },
+     {
+      "code": "Б-110",
+      "name": "Лингафонный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Б-111",
+      "name": "Аудитория",
+      "kind": "class",
+      "seats": 32,
+      "equipment": "проектор"
+     },
+     {
+      "code": "Б-112",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 52,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Б-113",
+      "name": "Кабинет деловых игр",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Б-114",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Б-115",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "экран"
+     },
+     {
+      "code": "Б-116",
+      "name": "Лингафонный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Б-117",
+      "name": "Аудитория",
+      "kind": "class",
+      "seats": 32,
+      "equipment": "проектор"
+     },
+     {
+      "code": "Б-118",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 52,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Б-119",
+      "name": "Кабинет деловых игр",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Б-120",
+      "name": "Проектный зал",
+      "kind": "work"
+     },
+     {
+      "code": "Б-121",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "экран"
+     },
+     {
+      "code": "Б-122",
+      "name": "Студия",
+      "kind": "work"
+     },
+     {
+      "code": "Б-123",
+      "name": "Аудитория",
+      "kind": "class",
+      "seats": 32,
+      "equipment": "проектор"
+     },
+     {
+      "code": "Б-124",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 52,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Б-125",
+      "name": "Кабинет деловых игр",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Б-126",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Б-127",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "экран"
+     },
+     {
+      "code": "Б-128",
+      "name": "Лингафонный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Б-129",
+      "name": "Аудитория",
+      "kind": "class",
+      "seats": 32,
+      "equipment": "проектор"
+     },
+     {
+      "code": "Б-130",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 52,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Б-131",
+      "name": "Кабинет деловых игр",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Б-132",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Б-133",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "экран"
+     },
+     {
+      "code": "Б-134",
+      "name": "Лингафонный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Б-135",
+      "name": "Аудитория",
+      "kind": "class",
+      "seats": 32,
+      "equipment": "проектор"
+     },
+     {
+      "code": "Б-136",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 52,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Б-137",
+      "name": "Кабинет деловых игр",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Б-138",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Б-139",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "экран"
+     },
+     {
+      "code": "Б-140",
+      "name": "Лингафонный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Б-141",
+      "name": "Аудитория",
+      "kind": "class",
+      "seats": 32,
+      "equipment": "проектор"
+     },
+     {
+      "code": "Б-142",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 52,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Б-143",
+      "name": "Кабинет деловых игр",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Б-144",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Б-145",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "экран"
+     },
+     {
+      "code": "Б-146",
+      "name": "Лингафонный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Б-147",
+      "name": "Аудитория",
+      "kind": "class",
+      "seats": 32,
+      "equipment": "проектор"
+     },
+     {
+      "code": "Б-148",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 52,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Б-149",
+      "name": "Кабинет деловых игр",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Б-150",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Б-151",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "экран"
+     }
+    ]
+   },
+   {
+    "id": "2",
+    "name": "2 этаж",
+    "rooms": [
+     {
+      "code": "Б-201",
+      "name": "Лингафонный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Б-202",
+      "name": "Аудитория",
+      "kind": "class",
+      "seats": 32,
+      "equipment": "проектор"
+     },
+     {
+      "code": "Б-203",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 52,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Б-204",
+      "name": "Кабинет деловых игр",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Б-205",
+      "name": "Аудитория",
+      "kind": "class"
+     },
+     {
+      "code": "Б-206",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "экран"
+     },
+     {
+      "code": "Б-207",
+      "name": "Лингафонный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Б-208",
+      "name": "Аудитория",
+      "kind": "class",
+      "seats": 32,
+      "equipment": "проектор"
+     },
+     {
+      "code": "Б-209",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 52,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Б-210",
+      "name": "Кабинет деловых игр",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Б-211",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Б-212",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "экран"
+     },
+     {
+      "code": "Б-213",
+      "name": "Лаборатория статистики",
+      "kind": "class"
+     },
+     {
+      "code": "Б-214",
+      "name": "Коворкинг",
+      "kind": "work"
+     },
+     {
+      "code": "Б-215",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 52,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Б-216",
+      "name": "Кабинет деловых игр",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Б-217",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Б-218",
+      "name": "Языковая аудитория",
+      "kind": "class"
+     },
+     {
+      "code": "Б-219",
+      "name": "Лингафонный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Б-220",
+      "name": "Аудитория",
+      "kind": "class",
+      "seats": 32,
+      "equipment": "проектор"
+     },
+     {
+      "code": "Б-221",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 52,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Б-222",
+      "name": "Кабинет деловых игр",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Б-223",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Б-224",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "экран"
+     },
+     {
+      "code": "Б-225",
+      "name": "Лингафонный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Б-226",
+      "name": "Аудитория",
+      "kind": "class",
+      "seats": 32,
+      "equipment": "проектор"
+     },
+     {
+      "code": "Б-227",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 52,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Б-228",
+      "name": "Кабинет деловых игр",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Б-229",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Б-230",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "экран"
+     },
+     {
+      "code": "Б-231",
+      "name": "Семинарская",
+      "kind": "class"
+     },
+     {
+      "code": "Б-232",
+      "name": "Аудитория",
+      "kind": "class",
+      "seats": 32,
+      "equipment": "проектор"
+     },
+     {
+      "code": "Б-233",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 52,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Б-234",
+      "name": "Кабинет деловых игр",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Б-235",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Б-236",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "экран"
+     },
+     {
+      "code": "Б-237",
+      "name": "Лингафонный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Б-238",
+      "name": "Аудитория",
+      "kind": "class",
+      "seats": 32,
+      "equipment": "проектор"
+     },
+     {
+      "code": "Б-239",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 52,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Б-240",
+      "name": "Аудитория",
+      "kind": "class"
+     },
+     {
+      "code": "Б-241",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Б-242",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "экран"
+     },
+     {
+      "code": "Б-243",
+      "name": "Лингафонный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Б-244",
+      "name": "Аудитория",
+      "kind": "class",
+      "seats": 32,
+      "equipment": "проектор"
+     },
+     {
+      "code": "Б-245",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 52,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Б-246",
+      "name": "Кабинет деловых игр",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Б-247",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Б-248",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "экран"
+     },
+     {
+      "code": "Б-249",
+      "name": "Лингафонный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "языковые станции"
+     }
+    ]
+   },
+   {
+    "id": "3",
+    "name": "3 этаж",
+    "rooms": [
+     {
+      "code": "Б-301",
+      "name": "Семинарская",
+      "kind": "class"
+     },
+     {
+      "code": "Б-302",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Б-303",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "экран"
+     },
+     {
+      "code": "Б-304",
+      "name": "Лингафонный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Б-305",
+      "name": "Языковая аудитория",
+      "kind": "class"
+     },
+     {
+      "code": "Б-306",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 52,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Б-307",
+      "name": "Кабинет деловых игр",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Б-308",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Б-309",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "экран"
+     },
+     {
+      "code": "Б-310",
+      "name": "Аудитория",
+      "kind": "class"
+     },
+     {
+      "code": "Б-311",
+      "name": "Аудитория",
+      "kind": "class",
+      "seats": 32,
+      "equipment": "проектор"
+     },
+     {
+      "code": "Б-312",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 52,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Б-313",
+      "name": "Кабинет деловых игр",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Б-314",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Б-315",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "экран"
+     },
+     {
+      "code": "Б-316",
+      "name": "Лингафонный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Б-317",
+      "name": "Аудитория",
+      "kind": "class",
+      "seats": 32,
+      "equipment": "проектор"
+     },
+     {
+      "code": "Б-319",
+      "name": "Кабинет деловых игр",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Б-320",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Б-321",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "экран"
+     },
+     {
+      "code": "Б-322",
+      "name": "Лекционный зал",
+      "kind": "class"
+     },
+     {
+      "code": "Б-323",
+      "name": "Аудитория",
+      "kind": "class",
+      "seats": 32,
+      "equipment": "проектор"
+     },
+     {
+      "code": "Б-324",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 52,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Б-325",
+      "name": "Кабинет деловых игр",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Б-326",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Б-327",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "экран"
+     },
+     {
+      "code": "Б-328",
+      "name": "Лингафонный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Б-329",
+      "name": "Аудитория",
+      "kind": "class",
+      "seats": 32,
+      "equipment": "проектор"
+     },
+     {
+      "code": "Б-330",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 52,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Б-331",
+      "name": "Кабинет деловых игр",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Б-332",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Б-333",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "экран"
+     },
+     {
+      "code": "Б-334",
+      "name": "Лингафонный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Б-335",
+      "name": "Аудитория",
+      "kind": "class",
+      "seats": 32,
+      "equipment": "проектор"
+     },
+     {
+      "code": "Б-336",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 52,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Б-337",
+      "name": "Кабинет деловых игр",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Б-338",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Б-339",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "экран"
+     },
+     {
+      "code": "Б-340",
+      "name": "Лингафонный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Б-341",
+      "name": "Аудитория",
+      "kind": "class",
+      "seats": 32,
+      "equipment": "проектор"
+     },
+     {
+      "code": "Б-342",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 52,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Б-343",
+      "name": "Кабинет деловых игр",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Б-344",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Б-345",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "экран"
+     },
+     {
+      "code": "Б-346",
+      "name": "Лингафонный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Б-347",
+      "name": "Аудитория",
+      "kind": "class",
+      "seats": 32,
+      "equipment": "проектор"
+     },
+     {
+      "code": "Б-348",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 52,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Б-349",
+      "name": "Кабинет деловых игр",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     }
+    ]
+   },
+   {
+    "id": "4",
+    "name": "4 этаж",
+    "rooms": [
+     {
+      "code": "Б-401",
+      "name": "Лингафонный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Б-402",
+      "name": "Семинарская",
+      "kind": "class"
+     },
+     {
+      "code": "Б-403",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 52,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Б-404",
+      "name": "Кабинет деловых игр",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Б-405",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Б-406",
+      "name": "Компьютерный класс",
+      "kind": "class"
+     },
+     {
+      "code": "Б-407",
+      "name": "Лингафонный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Б-408",
+      "name": "Аудитория",
+      "kind": "class",
+      "seats": 32,
+      "equipment": "проектор"
+     },
+     {
+      "code": "Б-409",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 52,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Б-410",
+      "name": "Кабинет деловых игр",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Б-411",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Б-412",
+      "name": "Аудитория",
+      "kind": "class"
+     },
+     {
+      "code": "Б-413",
+      "name": "Лингафонный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Б-414",
+      "name": "Аудитория",
+      "kind": "class",
+      "seats": 32,
+      "equipment": "проектор"
+     },
+     {
+      "code": "Б-415",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 52,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Б-416",
+      "name": "Кабинет деловых игр",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Б-417",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Б-418",
+      "name": "Лаборатория аналитики",
+      "kind": "class"
+     },
+     {
+      "code": "Б-419",
+      "name": "Лингафонный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Б-420",
+      "name": "Лекционный зал",
+      "kind": "class"
+     },
+     {
+      "code": "Б-421",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 52,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Б-422",
+      "name": "Кабинет деловых игр",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Б-423",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Б-424",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "экран"
+     },
+     {
+      "code": "Б-425",
+      "name": "Лингафонный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Б-426",
+      "name": "Аудитория",
+      "kind": "class",
+      "seats": 32,
+      "equipment": "проектор"
+     },
+     {
+      "code": "Б-427",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 52,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Б-428",
+      "name": "Кабинет деловых игр",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Б-429",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Б-430",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "экран"
+     },
+     {
+      "code": "Б-431",
+      "name": "Лингафонный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Б-432",
+      "name": "Аудитория",
+      "kind": "class",
+      "seats": 32,
+      "equipment": "проектор"
+     },
+     {
+      "code": "Б-433",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 52,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Б-434",
+      "name": "Кабинет деловых игр",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Б-435",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Б-436",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "экран"
+     },
+     {
+      "code": "Б-437",
+      "name": "Лингафонный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Б-438",
+      "name": "Аудитория",
+      "kind": "class",
+      "seats": 32,
+      "equipment": "проектор"
+     },
+     {
+      "code": "Б-439",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 52,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Б-440",
+      "name": "Кабинет деловых игр",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Б-441",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Б-442",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "экран"
+     },
+     {
+      "code": "Б-443",
+      "name": "Лингафонный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Б-444",
+      "name": "Аудитория",
+      "kind": "class",
+      "seats": 32,
+      "equipment": "проектор"
+     },
+     {
+      "code": "Б-445",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 52,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Б-446",
+      "name": "Кабинет деловых игр",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Б-447",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Б-448",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "экран"
+     }
+    ]
+   },
+   {
+    "id": "5",
+    "name": "5 этаж",
+    "rooms": [
+     {
+      "code": "Б-501",
+      "name": "Кабинет деловых игр",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Б-502",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Б-503",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "экран"
+     },
+     {
+      "code": "Б-504",
+      "name": "Лингафонный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Б-505",
+      "name": "Аудитория",
+      "kind": "class",
+      "seats": 32,
+      "equipment": "проектор"
+     },
+     {
+      "code": "Б-506",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 52,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Б-507",
+      "name": "Кабинет деловых игр",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Б-508",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Б-509",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "экран"
+     },
+     {
+      "code": "Б-510",
+      "name": "Лингафонный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Б-511",
+      "name": "Аудитория",
+      "kind": "class",
+      "seats": 32,
+      "equipment": "проектор"
+     },
+     {
+      "code": "Б-512",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 52,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Б-513",
+      "name": "Кабинет деловых игр",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Б-514",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Б-515",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "экран"
+     },
+     {
+      "code": "Б-516",
+      "name": "Лингафонный класс",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Б-517",
+      "name": "Аудитория",
+      "kind": "class",
+      "seats": 32,
+      "equipment": "проектор"
+     },
+     {
+      "code": "Б-518",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 52,
+      "equipment": "экран и микрофон"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "modern",
+  "name": "Корпус A",
+  "floors": [
+   {
+    "id": "1",
+    "name": "1 этаж",
+    "rooms": [
+     {
+      "code": "Н-101",
+      "name": "Спортзал",
+      "kind": "sport"
+     },
+     {
+      "code": "Н-102",
+      "name": "Переговорная",
+      "kind": "work"
+     },
+     {
+      "code": "Н-103",
+      "name": "Проектная аудитория",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Н-104",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Н-105",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "экран"
+     },
+     {
+      "code": "Н-106",
+      "name": "Мультимедийная аудитория",
+      "kind": "class",
+      "seats": 36,
+      "equipment": "видеосвязь"
+     },
+     {
+      "code": "Н-107",
+      "name": "Языковая лаборатория",
+      "kind": "class",
+      "seats": 20,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Н-108",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 54,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Н-109",
+      "name": "Проектная аудитория",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Н-110",
+      "name": "Аудитория",
+      "kind": "class"
+     },
+     {
+      "code": "Н-111",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "экран"
+     },
+     {
+      "code": "Н-112",
+      "name": "Мультимедийная аудитория",
+      "kind": "class",
+      "seats": 36,
+      "equipment": "видеосвязь"
+     },
+     {
+      "code": "Н-113",
+      "name": "Языковая лаборатория",
+      "kind": "class",
+      "seats": 20,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Н-114",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 54,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Н-115",
+      "name": "Проектная аудитория",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Н-116",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Н-117",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "экран"
+     },
+     {
+      "code": "Н-118",
+      "name": "Мультимедийная аудитория",
+      "kind": "class",
+      "seats": 36,
+      "equipment": "видеосвязь"
+     },
+     {
+      "code": "Н-119",
+      "name": "Языковая лаборатория",
+      "kind": "class",
+      "seats": 20,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Н-120",
+      "name": "Проектный зал",
+      "kind": "work"
+     },
+     {
+      "code": "Н-121",
+      "name": "Проектная аудитория",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Н-122",
+      "name": "Студия",
+      "kind": "work"
+     },
+     {
+      "code": "Н-123",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "экран"
+     },
+     {
+      "code": "Н-124",
+      "name": "Мультимедийная аудитория",
+      "kind": "class",
+      "seats": 36,
+      "equipment": "видеосвязь"
+     },
+     {
+      "code": "Н-125",
+      "name": "Языковая лаборатория",
+      "kind": "class",
+      "seats": 20,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Н-126",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 54,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Н-127",
+      "name": "Проектная аудитория",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Н-128",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Н-129",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "экран"
+     },
+     {
+      "code": "Н-130",
+      "name": "Мультимедийная аудитория",
+      "kind": "class",
+      "seats": 36,
+      "equipment": "видеосвязь"
+     },
+     {
+      "code": "Н-131",
+      "name": "Языковая лаборатория",
+      "kind": "class",
+      "seats": 20,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Н-132",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 54,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Н-133",
+      "name": "Проектная аудитория",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Н-134",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Н-135",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "экран"
+     },
+     {
+      "code": "Н-136",
+      "name": "Мультимедийная аудитория",
+      "kind": "class",
+      "seats": 36,
+      "equipment": "видеосвязь"
+     },
+     {
+      "code": "Н-137",
+      "name": "Языковая лаборатория",
+      "kind": "class",
+      "seats": 20,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Н-138",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 54,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Н-139",
+      "name": "Проектная аудитория",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Н-140",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Н-141",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "экран"
+     },
+     {
+      "code": "Н-142",
+      "name": "Мультимедийная аудитория",
+      "kind": "class",
+      "seats": 36,
+      "equipment": "видеосвязь"
+     },
+     {
+      "code": "Н-143",
+      "name": "Языковая лаборатория",
+      "kind": "class",
+      "seats": 20,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Н-144",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 54,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Н-145",
+      "name": "Проектная аудитория",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Н-146",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Н-147",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "экран"
+     },
+     {
+      "code": "Н-148",
+      "name": "Мультимедийная аудитория",
+      "kind": "class",
+      "seats": 36,
+      "equipment": "видеосвязь"
+     },
+     {
+      "code": "Н-149",
+      "name": "Языковая лаборатория",
+      "kind": "class",
+      "seats": 20,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Н-150",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 54,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Н-151",
+      "name": "Проектная аудитория",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Н-152",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Н-153",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "экран"
+     },
+     {
+      "code": "Н-154",
+      "name": "Мультимедийная аудитория",
+      "kind": "class",
+      "seats": 36,
+      "equipment": "видеосвязь"
+     }
+    ]
+   },
+   {
+    "id": "2",
+    "name": "2 этаж",
+    "rooms": [
+     {
+      "code": "Н-201",
+      "name": "Медиалаборатория",
+      "kind": "class"
+     },
+     {
+      "code": "Н-202",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "экран"
+     },
+     {
+      "code": "Н-203",
+      "name": "Мультимедийная аудитория",
+      "kind": "class",
+      "seats": 36,
+      "equipment": "видеосвязь"
+     },
+     {
+      "code": "Н-204",
+      "name": "Языковая лаборатория",
+      "kind": "class",
+      "seats": 20,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Н-205",
+      "name": "Аудитория",
+      "kind": "class"
+     },
+     {
+      "code": "Н-206",
+      "name": "Проектная аудитория",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Н-207",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Н-208",
+      "name": "Лингафонный класс",
+      "kind": "class"
+     },
+     {
+      "code": "Н-209",
+      "name": "Мультимедийная аудитория",
+      "kind": "class",
+      "seats": 36,
+      "equipment": "видеосвязь"
+     },
+     {
+      "code": "Н-210",
+      "name": "Языковая лаборатория",
+      "kind": "class",
+      "seats": 20,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Н-211",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 54,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Н-212",
+      "name": "Проектная аудитория",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Н-213",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Н-214",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "экран"
+     },
+     {
+      "code": "Н-215",
+      "name": "Семинарская",
+      "kind": "class"
+     },
+     {
+      "code": "Н-216",
+      "name": "Языковая лаборатория",
+      "kind": "class",
+      "seats": 20,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Н-217",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 54,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Н-218",
+      "name": "Проектная аудитория",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Н-219",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Н-220",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "экран"
+     },
+     {
+      "code": "Н-221",
+      "name": "Мультимедийная аудитория",
+      "kind": "class",
+      "seats": 36,
+      "equipment": "видеосвязь"
+     },
+     {
+      "code": "Н-222",
+      "name": "Языковая лаборатория",
+      "kind": "class",
+      "seats": 20,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Н-223",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 54,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Н-224",
+      "name": "Лаборатория перевода",
+      "kind": "class"
+     },
+     {
+      "code": "Н-225",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Н-226",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "экран"
+     },
+     {
+      "code": "Н-227",
+      "name": "Мультимедийная аудитория",
+      "kind": "class",
+      "seats": 36,
+      "equipment": "видеосвязь"
+     },
+     {
+      "code": "Н-228",
+      "name": "Языковая лаборатория",
+      "kind": "class",
+      "seats": 20,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Н-229",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 54,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Н-230",
+      "name": "Проектная аудитория",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Н-231",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Н-232",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "экран"
+     },
+     {
+      "code": "Н-233",
+      "name": "Мультимедийная аудитория",
+      "kind": "class",
+      "seats": 36,
+      "equipment": "видеосвязь"
+     },
+     {
+      "code": "Н-234",
+      "name": "Языковая лаборатория",
+      "kind": "class",
+      "seats": 20,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Н-235",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 54,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Н-236",
+      "name": "Проектная аудитория",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Н-237",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Н-238",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "экран"
+     },
+     {
+      "code": "Н-239",
+      "name": "Мультимедийная аудитория",
+      "kind": "class",
+      "seats": 36,
+      "equipment": "видеосвязь"
+     },
+     {
+      "code": "Н-240",
+      "name": "Языковая лаборатория",
+      "kind": "class",
+      "seats": 20,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Н-241",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 54,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Н-242",
+      "name": "Проектная аудитория",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Н-243",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Н-244",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "экран"
+     },
+     {
+      "code": "Н-245",
+      "name": "Мультимедийная аудитория",
+      "kind": "class",
+      "seats": 36,
+      "equipment": "видеосвязь"
+     },
+     {
+      "code": "Н-246",
+      "name": "Языковая лаборатория",
+      "kind": "class",
+      "seats": 20,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Н-247",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 54,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Н-248",
+      "name": "Проектная аудитория",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Н-249",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Н-250",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "экран"
+     }
+    ]
+   },
+   {
+    "id": "3",
+    "name": "3 этаж",
+    "rooms": [
+     {
+      "code": "Н-301",
+      "name": "Лекционный зал",
+      "kind": "class"
+     },
+     {
+      "code": "Н-302",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 54,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Н-303",
+      "name": "Проектная аудитория",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Н-304",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Н-305",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "экран"
+     },
+     {
+      "code": "Н-306",
+      "name": "Семинарская",
+      "kind": "class"
+     },
+     {
+      "code": "Н-307",
+      "name": "Языковая лаборатория",
+      "kind": "class",
+      "seats": 20,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Н-308",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 54,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Н-309",
+      "name": "Проектная аудитория",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Н-310",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Н-311",
+      "name": "Мультимедийный класс",
+      "kind": "class"
+     },
+     {
+      "code": "Н-312",
+      "name": "Мультимедийная аудитория",
+      "kind": "class",
+      "seats": 36,
+      "equipment": "видеосвязь"
+     },
+     {
+      "code": "Н-313",
+      "name": "Языковая лаборатория",
+      "kind": "class",
+      "seats": 20,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Н-314",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 54,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Н-315",
+      "name": "Проектная аудитория",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Н-316",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Н-317",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "экран"
+     },
+     {
+      "code": "Н-318",
+      "name": "Аудитория",
+      "kind": "class"
+     },
+     {
+      "code": "Н-319",
+      "name": "Языковая лаборатория",
+      "kind": "class",
+      "seats": 20,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Н-320",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 54,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Н-321",
+      "name": "Проектная аудитория",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Н-322",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Н-323",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "экран"
+     },
+     {
+      "code": "Н-324",
+      "name": "Мультимедийная аудитория",
+      "kind": "class",
+      "seats": 36,
+      "equipment": "видеосвязь"
+     },
+     {
+      "code": "Н-325",
+      "name": "Языковая лаборатория",
+      "kind": "class",
+      "seats": 20,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Н-326",
+      "name": "Конференц-зал",
+      "kind": "class"
+     },
+     {
+      "code": "Н-327",
+      "name": "Проектная аудитория",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Н-328",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Н-329",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "экран"
+     },
+     {
+      "code": "Н-330",
+      "name": "Мультимедийная аудитория",
+      "kind": "class",
+      "seats": 36,
+      "equipment": "видеосвязь"
+     },
+     {
+      "code": "Н-331",
+      "name": "Языковая лаборатория",
+      "kind": "class",
+      "seats": 20,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Н-332",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 54,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Н-333",
+      "name": "Проектная аудитория",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Н-334",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Н-335",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "экран"
+     },
+     {
+      "code": "Н-336",
+      "name": "Мультимедийная аудитория",
+      "kind": "class",
+      "seats": 36,
+      "equipment": "видеосвязь"
+     },
+     {
+      "code": "Н-337",
+      "name": "Языковая лаборатория",
+      "kind": "class",
+      "seats": 20,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Н-338",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 54,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Н-339",
+      "name": "Проектная аудитория",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Н-340",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Н-341",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "экран"
+     },
+     {
+      "code": "Н-342",
+      "name": "Мультимедийная аудитория",
+      "kind": "class",
+      "seats": 36,
+      "equipment": "видеосвязь"
+     },
+     {
+      "code": "Н-343",
+      "name": "Языковая лаборатория",
+      "kind": "class",
+      "seats": 20,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Н-344",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 54,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Н-345",
+      "name": "Проектная аудитория",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Н-346",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Н-347",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "экран"
+     },
+     {
+      "code": "Н-348",
+      "name": "Мультимедийная аудитория",
+      "kind": "class",
+      "seats": 36,
+      "equipment": "видеосвязь"
+     },
+     {
+      "code": "Н-349",
+      "name": "Языковая лаборатория",
+      "kind": "class",
+      "seats": 20,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Н-350",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 54,
+      "equipment": "экран и микрофон"
+     }
+    ]
+   },
+   {
+    "id": "4",
+    "name": "4 этаж",
+    "rooms": [
+     {
+      "code": "Н-401",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Н-402",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "экран"
+     },
+     {
+      "code": "Н-403",
+      "name": "Мультимедийная аудитория",
+      "kind": "class",
+      "seats": 36,
+      "equipment": "видеосвязь"
+     },
+     {
+      "code": "Н-404",
+      "name": "Языковая лаборатория",
+      "kind": "class",
+      "seats": 20,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Н-405",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 54,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Н-406",
+      "name": "Проектная аудитория",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Н-407",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Н-408",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "экран"
+     },
+     {
+      "code": "Н-409",
+      "name": "Мультимедийная аудитория",
+      "kind": "class",
+      "seats": 36,
+      "equipment": "видеосвязь"
+     },
+     {
+      "code": "Н-410",
+      "name": "Языковая лаборатория",
+      "kind": "class",
+      "seats": 20,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Н-411",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 54,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Н-412",
+      "name": "Проектная аудитория",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Н-413",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Н-414",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "экран"
+     },
+     {
+      "code": "Н-415",
+      "name": "Мультимедийная аудитория",
+      "kind": "class",
+      "seats": 36,
+      "equipment": "видеосвязь"
+     },
+     {
+      "code": "Н-416",
+      "name": "Языковая лаборатория",
+      "kind": "class",
+      "seats": 20,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Н-417",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 54,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Н-418",
+      "name": "Проектная аудитория",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Н-419",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Н-420",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "экран"
+     },
+     {
+      "code": "Н-421",
+      "name": "Мультимедийная аудитория",
+      "kind": "class",
+      "seats": 36,
+      "equipment": "видеосвязь"
+     },
+     {
+      "code": "Н-422",
+      "name": "Языковая лаборатория",
+      "kind": "class",
+      "seats": 20,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Н-423",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 54,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Н-424",
+      "name": "Проектная аудитория",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Н-425",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Н-426",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "экран"
+     },
+     {
+      "code": "Н-427",
+      "name": "Мультимедийная аудитория",
+      "kind": "class",
+      "seats": 36,
+      "equipment": "видеосвязь"
+     },
+     {
+      "code": "Н-428",
+      "name": "Языковая лаборатория",
+      "kind": "class",
+      "seats": 20,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Н-429",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 54,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Н-430",
+      "name": "Проектная аудитория",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     }
+    ]
+   },
+   {
+    "id": "5",
+    "name": "5 этаж",
+    "rooms": [
+     {
+      "code": "Н-501",
+      "name": "Языковая лаборатория",
+      "kind": "class",
+      "seats": 20,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Н-502",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 54,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Н-503",
+      "name": "Проектная аудитория",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Н-504",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Н-505",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "экран"
+     },
+     {
+      "code": "Н-506",
+      "name": "Мультимедийная аудитория",
+      "kind": "class",
+      "seats": 36,
+      "equipment": "видеосвязь"
+     },
+     {
+      "code": "Н-507",
+      "name": "Языковая лаборатория",
+      "kind": "class",
+      "seats": 20,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Н-508",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 54,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Н-509",
+      "name": "Проектная аудитория",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Н-510",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Н-511",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "экран"
+     },
+     {
+      "code": "Н-512",
+      "name": "Мультимедийная аудитория",
+      "kind": "class",
+      "seats": 36,
+      "equipment": "видеосвязь"
+     },
+     {
+      "code": "Н-513",
+      "name": "Языковая лаборатория",
+      "kind": "class",
+      "seats": 20,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Н-514",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 54,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Н-515",
+      "name": "Проектная аудитория",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Н-516",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Н-517",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "экран"
+     },
+     {
+      "code": "Н-518",
+      "name": "Мультимедийная аудитория",
+      "kind": "class",
+      "seats": 36,
+      "equipment": "видеосвязь"
+     },
+     {
+      "code": "Н-519",
+      "name": "Языковая лаборатория",
+      "kind": "class",
+      "seats": 20,
+      "equipment": "языковые станции"
+     },
+     {
+      "code": "Н-520",
+      "name": "Лекционная аудитория",
+      "kind": "class",
+      "seats": 54,
+      "equipment": "экран и микрофон"
+     },
+     {
+      "code": "Н-521",
+      "name": "Проектная аудитория",
+      "kind": "class",
+      "seats": 30,
+      "equipment": "интерактивная панель"
+     },
+     {
+      "code": "Н-522",
+      "name": "Компьютерный класс",
+      "kind": "class",
+      "seats": 26,
+      "equipment": "компьютеры"
+     },
+     {
+      "code": "Н-523",
+      "name": "Семинарская",
+      "kind": "class",
+      "seats": 24,
+      "equipment": "экран"
+     },
+     {
+      "code": "Н-524",
+      "name": "Мультимедийная аудитория",
+      "kind": "class",
+      "seats": 36,
+      "equipment": "видеосвязь"
+     }
+    ]
+   }
+  ]
+ }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "theme": "Dark",
+    "timings": [
+      {
+        "name": "tinky-theme-out",
+        "start": 527.44,
+        "duration": 500,
+        "delay": 0
+      },
+      {
+        "name": "tinky-theme-in",
+        "start": 527.44,
+        "duration": 500,
+        "delay": 0
+      }
+    ],
+    "frames": [
+      {
+        "time": 0,
+        "old": 1,
+        "next": 0
+      },
+      {
+        "time": 125,
+        "old": 0.75,
+        "next": 0.25
+      },
+      {
+        "time": 250,
+        "old": 0.5,
+        "next": 0.5
+      },
+      {
+        "time": 375,
+        "old": 0.25,
+        "next": 0.75
+      },
+      {
+        "time": 500,
+        "old": 0,
+        "next": 1
+      }
+    ]
+  },
+  {
+    "theme": "Light",
+    "timings": [
+      {
+        "name": "tinky-theme-out",
+        "start": 617.34,
+        "duration": 500,
+        "delay": 0
+      },
+      {
+        "name": "tinky-theme-in",
+        "start": 617.34,
+        "duration": 500,
+        "delay": 0
+      }
+    ],
+    "frames": [
+      {
+        "time": 0,
+        "old": 1,
+        "next": 0
+      },
+      {
+        "time": 125,
+        "old": 0.75,
+        "next": 0.25
+      },
+      {
+        "time": 250,
+        "old": 0.5,
+        "next": 0.5
+      },
+      {
+        "time": 375,
+        "old": 0.25,
+        "next": 0.75
+      },
+      {
+        "time": 500,
+        "old": 0,
+        "next": 1
+      }
+    ]
+  }
+]

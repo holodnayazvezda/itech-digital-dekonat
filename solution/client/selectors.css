@@ -1,0 +1,38 @@
+.v-application [data-sliding-selector] { position:relative; isolation:isolate; }
+.v-application [data-sliding-selector]::before {
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:var(--selector-width);
+  height:var(--selector-height);
+  transform:translate3d(var(--selector-x),var(--selector-y),0);
+  border-radius:var(--selector-radius,20px);
+  background:var(--selector-fill,var(--c-ink));
+  z-index:0;
+  pointer-events:none;
+}
+.v-application [data-sliding-selector][data-slide-animate="true"]::before {
+  transition:transform 280ms cubic-bezier(.2,.8,.2,1),width 280ms cubic-bezier(.2,.8,.2,1),height 280ms cubic-bezier(.2,.8,.2,1),border-radius 280ms ease;
+}
+.v-application [data-sliding-selector] > button {
+  position:relative;
+  z-index:1;
+  background:transparent!important;
+  transition:color 180ms ease;
+}
+.v-application [data-sliding-selector] > button:is([aria-pressed="true"],[aria-current="page"],[aria-selected="true"]) {
+  color:var(--selector-on,var(--c-surface))!important;
+  box-shadow:none;
+}
+.v-application .atlas-index-tabs[data-sliding-selector] { --selector-fill:var(--c-card); --selector-on:var(--c-ink); }
+.v-application .atlas-levels[data-sliding-selector] { --selector-fill:var(--c-brand); --selector-on:var(--c-onBrand); }
+.v-application .atlas-filters[data-sliding-selector] { --selector-fill:var(--c-soft); --selector-on:var(--c-softInk); }
+.v-application .month-strip[data-sliding-selector] { padding:4px; background:var(--c-tone); border-radius:24px; }
+@media(prefers-reduced-motion:no-preference) {
+  .study-content,.academic-section .plan-semester-card { animation:selector-content-in 180ms ease-out; }
+  @keyframes selector-content-in { from { opacity:.45; transform:translateY(4px); } to { opacity:1; transform:translateY(0); } }
+}
+@media(prefers-reduced-motion:reduce) {
+  .v-application [data-sliding-selector]::before,.v-application [data-sliding-selector] > button { transition:none!important; }
+}

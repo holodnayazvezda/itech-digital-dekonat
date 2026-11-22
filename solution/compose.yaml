@@ -1,0 +1,22 @@
+services:
+  campus:
+    build:
+      context: .
+      args:
+        LOGIN_MODE: ${CAMPUS_LOGIN_MODE:-demo}
+    image: campus-atlas:local
+    environment:
+      CAMPUS_MODE: ${CAMPUS_MODE:-demo}
+      CAMPUS_AI_BASE_URL: ${CAMPUS_AI_BASE_URL:-}
+      CAMPUS_AI_MODEL: ${CAMPUS_AI_MODEL:-}
+      CAMPUS_AI_API_KEY: ${CAMPUS_AI_API_KEY:-}
+      CAMPUS_AI_API_KEY_FILE: ${CAMPUS_AI_API_KEY_FILE:-}
+      CAMPUS_AI_TIMEOUT: ${CAMPUS_AI_TIMEOUT:-12}
+      CAMPUS_MCP_ORIGINS: ${CAMPUS_MCP_ORIGINS:-}
+    ports:
+      - "127.0.0.1:${CAMPUS_PORT:-8080}:8080"
+    volumes:
+      - campus-data:/data
+    init: true
+volumes:
+  campus-data:

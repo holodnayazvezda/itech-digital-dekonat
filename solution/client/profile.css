@@ -1,0 +1,48 @@
+.campus-dialog.profile-dialog { border:0; outline:none; border-radius:28px; --c-surface:#fff; --c-card:#f5f5f5; --c-tone:#f5f5f5; --c-ink:#242424; --c-muted:#858585; --c-line:#e8e8e8; }
+.v-theme--Dark .campus-dialog.profile-dialog { --c-surface:#191919; --c-card:#242424; --c-tone:#242424; --c-ink:#eee; --c-muted:#999; --c-line:#333; }
+.campus-dialog.profile-dialog::backdrop { background:rgb(0 0 0 / .44); }
+.profile-dialog .sheet { border-radius:28px; padding:24px; }
+.profile-dialog .sheet-top { margin:0 0 24px; }
+.profile-dialog .sheet-top h2 { margin:0; font-size:23px; font-weight:600; letter-spacing:-.02em; }
+.profile-dialog .sheet-top .close { background:var(--c-tone); color:var(--c-muted); height:36px; width:36px; display:grid; place-items:center; }
+.profile-content { display:grid; gap:24px; }
+.profile-identity { display:flex; gap:16px; align-items:center; padding:20px; border-radius:22px; background:var(--c-tone); }
+.profile-avatar { width:68px; height:68px; flex-shrink:0; display:grid; place-items:center; overflow:hidden; border-radius:50%; background:var(--c-surface); color:var(--c-ink); font-size:24px; font-weight:550; }
+.profile-avatar img { width:100%; height:100%; object-fit:cover; }
+.profile-name { min-width:0; }
+.profile-dialog .profile-name h3 { font-size:17px; font-weight:550; line-height:1.4; margin:0; overflow-wrap:anywhere; }
+.profile-dialog .profile-name p { margin:4px 0 8px; font-size:12px; color:var(--c-muted); }
+.profile-photo-action { display:flex; align-items:center; gap:6px; font-size:12px; color:var(--c-ink); min-height:28px; }
+.profile-photo-action:hover { text-decoration:underline; }
+.profile-details { padding:0 4px; }
+.profile-details h3 { font-size:12px; font-weight:500; color:var(--c-muted); margin:0 0 6px; }
+.profile-details dl { margin:0; }
+.profile-details dl > div { display:grid; grid-template-columns:100px minmax(0,1fr); gap:16px; padding:13px 0; border-bottom:1px solid var(--c-line); font-size:13px; line-height:1.6; }
+.profile-details dl > div:last-child { border:0; padding-bottom:0; }
+.profile-details dt { color:var(--c-muted); }
+.profile-details dd { margin:0; text-align:right; font-weight:450; overflow-wrap:anywhere; }
+.profile-account-actions { border-top:1px solid var(--c-line); padding-top:12px; display:grid; gap:4px; }
+.profile-switch-toggle,.profile-logout { display:flex; align-items:center; gap:12px; width:100%; padding:13px 12px; text-align:left; border-radius:14px; font-size:14px; }
+.profile-switch-toggle span,.profile-logout span { flex:1; }
+.profile-logout span { color:#e65050; }
+.profile-switch-toggle:hover,.profile-logout:hover { background:var(--c-tone); }
+.profile-switch-toggle .expanded { transform:rotate(180deg); }
+.profile-switch-toggle > svg,.profile-logout > svg { color:var(--c-muted); flex-shrink:0; }
+.profile-switcher { padding:16px; margin:0 0 8px; border-radius:18px; background:var(--c-tone); }
+.profile-switcher .account-select-label { font-size:11px; }
+.profile-switcher .account-select-trigger { border-radius:12px; border:1px solid var(--c-line); background:var(--c-surface); min-height:44px; font-size:12px; }
+.profile-switcher .account-options { position:static; margin-top:8px; max-height:220px; box-shadow:none; border-radius:14px; }
+.profile-switcher .account-options button { white-space:normal; font-size:12px; }
+.profile-switcher .account-options small { font-size:10px; }
+.profile-switch-confirm { display:flex; align-items:center; justify-content:center; gap:10px; margin-top:12px; width:100%; padding:11px 12px; border-radius:14px; background:var(--c-ink); color:var(--c-surface); font-size:12px; }
+.profile-switch-confirm:disabled { opacity:.3; cursor:default; }
+.profile-content button:focus-visible { outline:1px solid var(--c-muted); outline-offset:2px; }
+@media(max-width:680px) {
+  .campus-dialog.profile-dialog { margin:auto auto 8px; width:calc(100% - 16px); border-radius:24px; }
+  .profile-dialog .sheet { padding:20px; border-radius:24px; }
+  .profile-content { gap:20px; }
+  .profile-identity { padding:16px; gap:12px; border-radius:18px; }
+  .profile-avatar { width:56px; height:56px; font-size:21px; }
+  .profile-dialog .profile-name h3 { font-size:15px; }
+  .profile-details dl > div { grid-template-columns:90px minmax(0,1fr); gap:10px; font-size:12px; }
+}

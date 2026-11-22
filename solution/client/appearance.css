@@ -1,0 +1,28 @@
+:root.theme-crossfade .v-application,
+:root.theme-crossfade .v-application *,
+:root.theme-crossfade .v-application *::before,
+:root.theme-crossfade .v-application *::after {
+  transition:none!important;
+}
+:root.theme-crossfade::view-transition-group(root) {
+  animation-duration:500ms;
+  animation-timing-function:linear;
+}
+:root.theme-crossfade::view-transition-image-pair(root) { isolation:isolate; }
+:root.theme-crossfade::view-transition-old(root),
+:root.theme-crossfade::view-transition-new(root) {
+  animation-duration:500ms;
+  animation-delay:0s;
+  animation-timing-function:linear;
+  animation-fill-mode:both;
+  mix-blend-mode:plus-lighter;
+}
+:root.theme-crossfade::view-transition-old(root) { animation-name:tinky-theme-out; }
+:root.theme-crossfade::view-transition-new(root) { animation-name:tinky-theme-in; }
+@keyframes tinky-theme-out { from { opacity:1; } to { opacity:0; } }
+@keyframes tinky-theme-in { from { opacity:0; } to { opacity:1; } }
+@media(prefers-reduced-motion:reduce) {
+  :root.theme-crossfade::view-transition-group(root),
+  :root.theme-crossfade::view-transition-old(root),
+  :root.theme-crossfade::view-transition-new(root) { animation:none; }
+}

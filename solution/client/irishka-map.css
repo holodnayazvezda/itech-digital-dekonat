@@ -1,0 +1,27 @@
+.irishka-map-instruction { margin-top:9px; }
+.irishka-map-instruction .campus-maneuver-icon { background:var(--ic-hover); }
+.irishka-map-note { color:var(--ic-muted); font-size:12px; margin-block:7px; }
+.irishka-map-drawing { min-width:0; }
+.irishka-map-drawing.atlas-nav .atlas-drawing { border-radius:13px; overflow:hidden; }
+.irishka-map-drawing.atlas-nav .atlas-svg { height:clamp(250px,42vw,390px); touch-action:pan-y; }
+.irishka-map-placeholder { display:grid; place-items:center; height:clamp(250px,42vw,390px); border-radius:13px; background:var(--ic-soft); color:var(--ic-muted); font-size:12px; }
+.irishka-map-points { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; margin-bottom:10px; }
+.irishka-map .atlas-route-field { grid-column:auto; grid-row:auto; }
+.irishka-map .atlas-route-field > label { margin-bottom:3px; }
+.irishka-map .atlas-route-input { min-height:38px; padding-inline:9px; border-radius:11px; background:var(--ic-bg); }
+.irishka-map .atlas-route-input input { height:38px; }
+.irishka-map .atlas-route-suggestions { width:100%; background:var(--ic-bg); border:1px solid var(--ic-line); }
+.irishka-map-floors { display:flex; gap:5px; overflow:auto; padding-block:2px 8px; scrollbar-width:thin; }
+.irishka-chat .irishka-map-floors button { min-height:30px; flex-shrink:0; border-radius:30px; background:var(--ic-bg); color:var(--ic-muted); padding-inline:10px; font-size:11px; }
+.irishka-chat .irishka-map-floors button[aria-pressed=true] { background:var(--ic-hover); color:var(--ic-ink); }
+@media(max-width:520px) {
+  .irishka-map-points { grid-template-columns:1fr; }
+  .irishka-map .atlas-route-input input { font-size:16px; }
+}
+@media(max-width:640px) {
+  .irishka-map-drawing.atlas-nav .atlas-svg,
+  .irishka-map-placeholder { height:clamp(210px,65vw,280px); }
+  .irishka-map-floors { scrollbar-width:none; }
+  .irishka-map-floors::-webkit-scrollbar { display:none; }
+  .irishka-chat .irishka-map-floors button { min-height:36px; font-size:12px; }
+}

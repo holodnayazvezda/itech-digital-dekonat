@@ -1,0 +1,44 @@
+.lesson-actions,.lesson-change { margin-top:18px; padding:16px; border-radius:18px; background:var(--c-card); }
+.lesson-actions h3,.lesson-change strong { margin:0 0 12px; font-size:15px; font-weight:600; }
+.lesson-change strong { display:block; }
+.lesson-change p { margin:6px 0; font-size:13px; color:var(--c-muted); white-space:pre-wrap; overflow-wrap:anywhere; }
+.lesson-change[data-cancelled] { border-inline-start:3px solid #e27373; }
+.lesson-action-options { display:grid; gap:8px; }
+.lesson-action-options button { display:flex; align-items:center; gap:10px; padding:12px; border-radius:12px; background:var(--c-tone); text-align:left; font-size:13px; }
+.lesson-action-options button:hover { box-shadow:inset 0 0 0 1px var(--c-line); }
+.lesson-action-form { display:grid; gap:12px; }
+.lesson-action-form:focus { outline:none; }
+.lesson-action-kind,.lesson-action-hint { margin:0; color:var(--c-muted); font-size:12px; }
+.lesson-action-fields { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:12px; }
+.lesson-action-room { grid-column:1 / -1; }
+.lesson-action-form .field { margin:0; min-width:0; }
+.lesson-action-form .field :is(input,select,textarea) { width:100%; min-width:0; }
+.lesson-action-buttons { display:flex; align-items:center; flex-wrap:wrap; gap:10px; }
+.lesson-action-buttons .campus-action { margin:0; font-size:13px; }
+.lesson-slot-status { color:var(--c-muted); font-size:11px; font-weight:600; }
+.timetable-event[data-cancelled] { opacity:.65; }
+.timetable-event .timetable-event-kind.timetable-event-status { display:flex; }
+.agenda-event[data-cancelled] .agenda-event-body strong,.timetable-event[data-cancelled] strong { text-decoration:line-through; }
+.workspace-start:has(.office-schedule) { width:min(100%,1040px); margin-inline:auto; }
+.office-schedule { display:grid; gap:16px; }
+.office-schedule-controls { display:grid; grid-template-columns:minmax(0,180px) minmax(0,1fr); gap:16px; }
+.office-schedule-controls label { min-width:0; margin:0; }
+.office-schedule-controls input { width:100%; min-width:0; }
+.office-schedule-count { margin:0; color:var(--c-muted); font-size:12px; }
+.office-schedule-list { display:grid; gap:8px; }
+.office-schedule-list button { display:grid; grid-template-columns:minmax(0,94px) minmax(0,1fr); align-items:center; gap:14px; width:100%; padding:15px 18px; border-radius:16px; background:var(--c-card); text-align:left; }
+.office-schedule-list button:hover { background:var(--c-tone); }
+.office-schedule-list time { color:var(--c-muted); font-size:12px; font-variant-numeric:tabular-nums; }
+.office-schedule-list strong { display:block; font-size:14px; font-weight:600; }
+.office-schedule-list small { display:block; margin-top:5px; color:var(--c-muted); font-size:12px; }
+@media(max-width:560px) {
+ .sheet:has(.lesson-details) { scroll-padding-block-start:48px; }
+ .sheet:has(.lesson-details) > .sheet-top { position:sticky; top:0; z-index:2; background:var(--c-surface); }
+ .office-schedule-controls { grid-template-columns:1fr; gap:10px; }
+ .office-schedule-controls input,.lesson-action-form .field :is(input,textarea) { min-height:44px; font-size:16px; }
+ .office-schedule-list button { grid-template-columns:1fr; gap:6px; padding:12px 14px; }
+ .lesson-action-buttons .campus-action { min-height:44px; }
+}
+@media(max-width:380px) {
+ .lesson-action-fields { grid-template-columns:minmax(0,1fr); }
+}

@@ -1,0 +1,113 @@
+import {test,expect} from '@playwright/test';
+
+test('выбор начала и конца, обмен точками и маршрут по этажам и корпусам',async({page})=>{
+  const errors=[];page.on('pageerror',e=>errors.push(e.message));
+  await page.goto('/');await page.getByRole('button',{name:'Войти',exact:true}).click();
+  await expect(page.locator('.shell')).toBeVisible();
+  await page.getByRole("navigation", { name: "Навигация кабинета", exact: true }).getByRole('button',{name:'Сервисы',exact:true}).click();
+  await page.getByRole('button',{name:'Навигатор',exact:true}).click();
+  await expect(page.locator('.atlas-svg')).toBeVisible();
+  const dark = await page.locator(".v-application").evaluate(node => node.classList.contains("v-theme--Dark"));
+  await expect(page.locator('.atlas-drawing')).toHaveCSS('background-color',dark?'rgb(5, 5, 5)':'rgb(243, 240, 233)');
+  await expect(page.locator('.atlas-drawing')).toHaveCSS('background-image','none');
+  await expect(page.locator('.atlas-wall-face').first()).toBeVisible();
+  const scene=page.locator('.atlas-scene'), svg=page.locator('.atlas-svg');
+  const before=await scene.getAttribute('transform');
+  await expect(page.getByRole('slider')).toHaveCount(0);
+  const cube=page.getByRole('button',{name:'Вращать карту',exact:true});
+  await expect(cube).toHaveCount(0);
+  await svg.evaluate(el=>el.scrollIntoView({block:"center",behavior:"instant"}));
+  const mapBox=await svg.boundingBox();
+  const viewBefore=await svg.getAttribute("viewBox");
+  await page.mouse.move(mapBox.x+mapBox.width*.55,mapBox.y+mapBox.height*.55);
+  await page.mouse.down();await page.mouse.move(mapBox.x+mapBox.width*.55+25,mapBox.y+mapBox.height*.55-10,{steps:8});await page.mouse.up();
+  await expect(scene).toHaveAttribute('transform',before);
+  await expect(svg).not.toHaveAttribute('viewBox',viewBefore);
+  await expect(page.locator('.atlas-board')).toHaveCSS('user-select','none');
+  await svg.focus();await expect(svg).toHaveCSS('outline-style','none');
+  const zoomBefore=await svg.getAttribute('viewBox');
+  await page.getByRole('button',{name:'Увеличить карту',exact:true}).click();
+  await expect(svg).not.toHaveAttribute('viewBox',zoomBefore);
+  await expect(scene).toHaveAttribute('transform',before);
+  const toggle=page.getByRole('button',{name:'Управление вращением',exact:true});
+  await toggle.click();await expect(cube).toBeVisible();
+  await cube.evaluate(el=>el.scrollIntoView({block:"center",behavior:"instant"}));
+  const box=await cube.boundingBox();
+  await page.mouse.move(box.x+box.width/2,box.y+box.height/2);
+  await page.mouse.down();await page.mouse.move(box.x+box.width/2+35,box.y+box.height/2-15,{steps:8});await page.mouse.up();
+  await expect(scene).not.toHaveAttribute('transform',before);
+  await expect(svg).not.toHaveAttribute('data-tilt','42');
+  await cube.focus();const angle=await svg.getAttribute('data-angle');await page.keyboard.press('ArrowRight');
+  await expect(svg).not.toHaveAttribute('data-angle',angle);
+  await cube.dblclick();
+  await page.locator(".atlas-board").screenshot({path:`docs/navigator-rotation-open-${page.viewportSize().width}.png`});
+  await page.locator(".atlas-zoom").screenshot({path:`docs/navigator-rotation-control-${page.viewportSize().width}.png`});
+  await page.keyboard.press("Escape");await expect(cube).not.toBeVisible();await expect(toggle).toBeFocused();
+  await page.locator('.atlas-board').screenshot({path:`docs/navigator-palette-${page.viewportSize().width}.png`});
+  async function choose(label,query){
+    await page.getByRole('combobox',{name:label,exact:true}).fill(query);
+    await page.getByRole('listbox',{name:label,exact:true}).getByRole('option',{name:new RegExp(query)}).first().click();
+  }
+  await choose('Откуда','Б-108');await choose('Куда','Б-412');
+  await expect(page.getByRole('region',{name:'Шаги маршрута'})).toContainText('Б-108');
+  await page.getByRole('button',{name:'Поменять точки местами'}).click();
+  await expect(page.getByRole('combobox',{name:'Откуда',exact:true})).toHaveValue(/Б-412/);
+  await expect(page.getByRole('combobox',{name:'Куда',exact:true})).toHaveValue(/Б-108/);
+  await page.getByRole('button',{name:'Поменять точки местами'}).click();
+  const steps=page.getByRole('region',{name:'Шаги маршрута'});
+  await expect(steps).toContainText('1 этаж');
+  await page.getByRole('button',{name:'Далее',exact:true}).click();
+  await expect(steps).toContainText('4 этаж');
+  await steps.screenshot({path:`docs/navigator-modern-card-${page.viewportSize().width}.png`});
+  await page.screenshot({path:`docs/navigator-route-${page.viewportSize().width}.png`,fullPage:true});
+  await page.getByRole('button',{name:'Завершить',exact:true}).click();
+  await choose('Куда','Н-205');
+  await expect(steps).toContainText('Б-108');
+  let sawStreet=false,sawOther=false;
+  for(let i=0;i<8;i++){
+    const content=await steps.innerText();
+    sawStreet ||= content.includes('по улице');sawOther ||= content.includes('Корпус A');
+    const next=page.getByRole('button',{name:'Далее',exact:true});
+    if(!await next.count())break;
+    await next.click();
+  }
+  expect(sawStreet).toBe(true);expect(sawOther).toBe(true);
+  await page.getByRole('button',{name:'Завершить',exact:true}).click();
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+  await page.screenshot({path:`docs/navigator-${page.viewportSize().width}.png`,fullPage:true});
+  await page.getByRole('combobox',{name:'Откуда',exact:true}).fill('Б-108');
+  await page.keyboard.press('ArrowDown');await page.keyboard.press('Enter');
+  await expect(page.getByRole('listbox',{name:'Откуда',exact:true})).not.toBeVisible();
+  expect(errors).toEqual([]);
+});
+
+test('мобильный навигатор: компактный выбор, карта и этажи под ней',async({page},testInfo)=>{
+  await page.setViewportSize({width:390,height:844});
+  await page.goto('/services/map');
+  await page.getByRole('button',{name:'Войти',exact:true}).click();
+  const atlas=page.getByRole('region',{name:'Навигатор кампуса',exact:true});
+  await expect(atlas.locator('.atlas-svg')).toBeVisible();
+  await expect(atlas.getByRole('searchbox',{name:'Поиск по карте'})).toHaveCount(0);
+  for(const width of [360,390]) {
+    await page.setViewportSize({width,height:844});
+    await page.evaluate(()=>document.fonts.ready);
+    await page.evaluate(()=>scrollTo(0,0));
+    const drawing=await atlas.locator('.atlas-drawing').boundingBox();
+    const floors=atlas.getByRole('group',{name:'Выбрать этаж',exact:true});
+    const box=await floors.boundingBox();
+    expect(box.y).toBeGreaterThanOrEqual(drawing.y+drawing.height);
+    await expect(floors.getByRole('button',{name:'4 этаж',exact:true})).toBeInViewport({ratio:1});
+    await page.screenshot({path:testInfo.outputPath(`navigator-mobile-${width}.png`)});
+    await floors.getByRole('button',{name:'4 этаж',exact:true}).click();
+    await expect(floors.getByRole('button',{name:'4 этаж',exact:true})).toHaveAttribute('aria-pressed','true');
+    expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBe(width);
+  }
+  await atlas.getByRole('combobox',{name:'Куда',exact:true}).fill('Б-412');
+  const options=atlas.getByRole('listbox',{name:'Куда',exact:true});
+  await expect(options).toBeVisible();
+  const box=await options.boundingBox();
+  expect(box.x).toBeGreaterThanOrEqual(0);
+  expect(box.x+box.width).toBeLessThanOrEqual(390);
+  await options.getByRole('option',{name:/Б-412/}).first().click();
+  await expect(atlas.getByRole('region',{name:'Шаги маршрута'})).toBeVisible();
+});

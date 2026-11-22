@@ -1,0 +1,7 @@
+# New view of the login-screen building
+
+Created with the built-in imagegen tool. Reference: `solution/public/university-campus.png`. Selected output: `solution/public/services/campus-main-view.png`. This is a generated depiction of the fictional campus, not a photograph of a real university.
+
+Final prompt:
+
+Use case: photorealistic architectural visualization. Asset type: wide horizontal image for a university building booking card, 3:2 landscape composition. The sole reference image is the existing login-screen photo; regenerate the SAME fictional university building, NOT an illustration and NOT another architectural design. Preserve the beige/cream limestone exterior, three main floors, rectangular central entrance tower with dark vertical glazing and flat cornice, central shallow metal canopy, broad entrance steps, regular window rhythm, and curved glazed right-hand wing. Change the camera viewpoint to the RIGHT-FRONT corner: the right curved wing is closer to camera, looking diagonally toward the central entrance and left wing. Keep building identity recognizable, physically consistent. Soft warm afternoon sunlight, realistic blue sky, mature leafy campus trees, natural landscaping and an empty stone plaza. Compose the whole facade for a wide booking-card crop with less empty sky than the portrait reference. Realistic architectural photography. No text, logos, emblems, people, watermarks, decorative graphics or vector artwork.

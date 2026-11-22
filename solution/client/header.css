@@ -1,0 +1,101 @@
+.shell .rail {
+  display:grid;
+  grid-template-columns:80px max-content minmax(80px,1fr) 128px;
+  grid-template-rows:auto;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  min-height:64px;
+  padding:10px max(24px,calc((100% - 1376px)/2));
+}
+.shell .rail .header-logo { display:block; grid-column:1; grid-row:1; width:80px; height:28px; transform:translateY(-2px); }
+.shell .rail > nav {
+  display:flex;
+  grid-column:2;
+  grid-row:1;
+  justify-self:start;
+  justify-content:flex-start;
+  flex-wrap:nowrap;
+  min-width:0;
+  gap:4px;
+}
+.shell .rail > nav button { flex:none; white-space:nowrap; }
+.shell .rail .tools { display:contents; }
+.shell .rail .global-search {
+  display:block;
+  position:relative;
+  inset:auto;
+  transform:none;
+  grid-column:3;
+  grid-row:1;
+  width:100%;
+  max-width:280px;
+  min-width:0;
+  justify-self:center;
+}
+.shell .rail .irishka-controls { grid-column:4; grid-row:1; justify-self:end; }
+@media(max-width:900px) and (min-width:641px) {
+  .shell .rail { gap:12px; padding-inline:16px; }
+  .shell .rail > nav button { padding-inline:10px; font-size:13px; }
+}
+@media(max-width:740px) and (min-width:641px) {
+  .shell .rail:has(> .office-navigation) {
+    grid-template-columns:max-content minmax(60px,1fr) 128px;
+  }
+  .shell .rail:has(> .office-navigation) .header-logo { display:none; }
+  .shell .rail > .office-navigation { grid-column:1; }
+  .shell .rail:has(> .office-navigation) .global-search { grid-column:2; }
+  .shell .rail:has(> .office-navigation) .irishka-controls { grid-column:3; }
+}
+@media(max-width:640px) {
+  .shell.phone-shell .rail {
+    grid-template-columns:minmax(0,1fr) 44px;
+    grid-template-rows:auto;
+    gap:8px;
+    padding:8px max(12px, env(safe-area-inset-right)) 8px max(12px, env(safe-area-inset-left));
+    min-height:60px;
+    background:transparent;
+    -webkit-backdrop-filter:none;
+    backdrop-filter:none;
+    box-shadow:none;
+  }
+  .shell.phone-shell .rail .global-search { position:static; grid-column:1; grid-row:1; width:calc(100% - 8px); max-width:none; justify-self:start; }
+  .shell.phone-shell .rail .global-search input {
+    height:40px; min-height:40px; font-size:16px; padding-inline:16px;
+    background:color-mix(in srgb,var(--c-card) 60%,transparent);
+    -webkit-backdrop-filter:blur(24px) saturate(130%);
+    backdrop-filter:blur(24px) saturate(130%);
+    border:1px solid color-mix(in srgb,var(--c-ink) 9%,transparent);
+    border-radius:22px;
+  }
+  .shell.phone-shell .rail .global-search input:focus { border-color:color-mix(in srgb,var(--c-ink) 24%,transparent); box-shadow:none; }
+  .shell.phone-shell .rail:has(.global-search[data-search-open="true"])::before {
+    content:""; position:absolute; inset:0; z-index:-1; pointer-events:none;
+    background:color-mix(in srgb,var(--c-card) 72%,transparent);
+    -webkit-backdrop-filter:blur(24px) saturate(130%);
+    backdrop-filter:blur(24px) saturate(130%);
+  }
+  .shell.phone-shell .rail .global-search[data-search-open="true"] { width:100%; }
+  .shell.phone-shell .rail .global-search[data-search-open="true"] input {
+    background:transparent; border-color:transparent; border-radius:0;
+    -webkit-backdrop-filter:none; backdrop-filter:none;
+  }
+  .shell.phone-shell .rail .irishka-controls { grid-column:2; grid-row:1; }
+  .shell.phone-shell .rail .search-results {
+    inset:100% 0 auto;
+    width:auto; min-width:0; max-width:none;
+    max-height:min(460px, calc(100dvh - 146px - env(safe-area-inset-bottom)), var(--search-visible-height, 100dvh));
+    border:0; border-radius:0 0 26px 26px;
+    padding:8px max(12px, env(safe-area-inset-right)) 16px max(12px, env(safe-area-inset-left));
+    background:var(--c-card);
+    box-shadow:0 16px 28px #0002;
+  }
+  .shell.phone-shell .rail .search-results button { min-height:44px; border-radius:14px; }
+  @media(prefers-reduced-motion:no-preference) {
+    .shell.phone-shell .rail .global-search { transition:width .2s ease; }
+    .shell.phone-shell .rail .global-search input { transition:border-radius .2s ease,background-color .2s ease,border-color .2s ease; }
+    .shell.phone-shell .rail .search-results { animation:phone-search-expand .2s ease-out both; transform-origin:top; }
+    @keyframes phone-search-expand { from { opacity:0; transform:translateY(-6px) scaleY(.96); } to { opacity:1; transform:none; } }
+  }
+  .shell .workspace-start > header.study-root-heading { display:none; }
+}

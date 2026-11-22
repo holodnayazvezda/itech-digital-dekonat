@@ -1,0 +1,384 @@
+{
+  "mode": "separate-element-transitions",
+  "objects": [
+    {
+      "tag": "DIV",
+      "class": "v-application v-theme--Dark theme-changing",
+      "text": "РасписаниеУчёбаСервисыКонкурсный прототипКампусСер",
+      "transitions": {
+        "background-color": {
+          "duration": 500,
+          "starts": [
+            462.734000000637
+          ]
+        }
+      }
+    },
+    {
+      "tag": "ASIDE",
+      "class": "rail",
+      "text": "РасписаниеУчёбаСервисыКонкурсный прототип",
+      "transitions": {
+        "background-color": {
+          "duration": 500,
+          "starts": [
+            462.734000000637
+          ]
+        },
+        "box-shadow": {
+          "duration": 500,
+          "starts": [
+            462.734000000637
+          ]
+        },
+        "color": {
+          "duration": 500,
+          "starts": [
+            462.734000000637
+          ]
+        }
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "class": "",
+      "text": "Расписание",
+      "transitions": {
+        "color": {
+          "duration": 500,
+          "starts": [
+            462.734000000637
+          ]
+        }
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "class": "",
+      "text": "Учёба",
+      "transitions": {
+        "color": {
+          "duration": 500,
+          "starts": [
+            462.734000000637
+          ]
+        }
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "class": "active",
+      "text": "Сервисы",
+      "transitions": {
+        "background-color": {
+          "duration": 500,
+          "starts": [
+            462.734000000637
+          ]
+        },
+        "color": {
+          "duration": 500,
+          "starts": [
+            462.734000000637
+          ]
+        }
+      }
+    },
+    {
+      "tag": "INPUT",
+      "class": "",
+      "text": "",
+      "transitions": {
+        "background-color": {
+          "duration": 500,
+          "starts": [
+            462.734000000637
+          ]
+        },
+        "border-bottom-color": {
+          "duration": 500,
+          "starts": [
+            462.734000000637
+          ]
+        },
+        "border-left-color": {
+          "duration": 500,
+          "starts": [
+            462.734000000637
+          ]
+        },
+        "border-right-color": {
+          "duration": 500,
+          "starts": [
+            462.734000000637
+          ]
+        },
+        "border-top-color": {
+          "duration": 500,
+          "starts": [
+            462.734000000637
+          ]
+        },
+        "color": {
+          "duration": 500,
+          "starts": [
+            462.734000000637
+          ]
+        }
+      }
+    },
+    {
+      "tag": "H1",
+      "class": "",
+      "text": "Сервисы",
+      "transitions": {
+        "color": {
+          "duration": 500,
+          "starts": [
+            462.734000000637
+          ]
+        }
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "class": "service-tile",
+      "text": "Wi-Fi кампуса",
+      "transitions": {
+        "box-shadow": {
+          "duration": 500,
+          "starts": [
+            462.734000000637
+          ]
+        }
+      }
+    },
+    {
+      "tag": "svg",
+      "class": "service-tile-symbol",
+      "text": "",
+      "transitions": {}
+    },
+    {
+      "tag": "B",
+      "class": "",
+      "text": "Wi-Fi кампуса",
+      "transitions": {}
+    },
+    {
+      "tag": "BUTTON",
+      "class": "service-tile service-tile-photo",
+      "text": "Спорт",
+      "transitions": {
+        "box-shadow": {
+          "duration": 500,
+          "starts": [
+            462.734000000637
+          ]
+        }
+      }
+    },
+    {
+      "tag": "B",
+      "class": "",
+      "text": "Спорт",
+      "transitions": {}
+    },
+    {
+      "tag": "BUTTON",
+      "class": "service-tile service-tile-photo",
+      "text": "Бронирование помещений",
+      "transitions": {
+        "box-shadow": {
+          "duration": 500,
+          "starts": [
+            462.734000000637
+          ]
+        }
+      }
+    },
+    {
+      "tag": "B",
+      "class": "",
+      "text": "Бронирование помещений",
+      "transitions": {}
+    },
+    {
+      "tag": "BUTTON",
+      "class": "service-tile",
+      "text": "Навигатор",
+      "transitions": {
+        "box-shadow": {
+          "duration": 500,
+          "starts": [
+            462.734000000637
+          ]
+        }
+      }
+    },
+    {
+      "tag": "B",
+      "class": "",
+      "text": "Навигатор",
+      "transitions": {}
+    },
+    {
+      "tag": "H2",
+      "class": "",
+      "text": "Заявки",
+      "transitions": {
+        "color": {
+          "duration": 500,
+          "starts": [
+            462.734000000637
+          ]
+        }
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "class": "service-tile",
+      "text": "Документы и заявления",
+      "transitions": {
+        "box-shadow": {
+          "duration": 500,
+          "starts": [
+            462.734000000637
+          ]
+        }
+      }
+    },
+    {
+      "tag": "B",
+      "class": "",
+      "text": "Документы и заявления",
+      "transitions": {}
+    },
+    {
+      "tag": "BUTTON",
+      "class": "service-tile",
+      "text": "Мои заявки",
+      "transitions": {
+        "box-shadow": {
+          "duration": 500,
+          "starts": [
+            462.734000000637
+          ]
+        }
+      }
+    },
+    {
+      "tag": "B",
+      "class": "",
+      "text": "Мои заявки",
+      "transitions": {}
+    },
+    {
+      "tag": "H2",
+      "class": "",
+      "text": "Студенческая жизнь",
+      "transitions": {
+        "color": {
+          "duration": 500,
+          "starts": [
+            462.734000000637
+          ]
+        }
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "class": "service-tile service-tile-photo",
+      "text": "Стипендия",
+      "transitions": {
+        "box-shadow": {
+          "duration": 500,
+          "starts": [
+            462.734000000637
+          ]
+        }
+      }
+    },
+    {
+      "tag": "B",
+      "class": "",
+      "text": "Стипендия",
+      "transitions": {}
+    },
+    {
+      "tag": "BUTTON",
+      "class": "service-tile",
+      "text": "Люди",
+      "transitions": {
+        "box-shadow": {
+          "duration": 500,
+          "starts": [
+            462.734000000637
+          ]
+        }
+      }
+    },
+    {
+      "tag": "svg",
+      "class": "lucide lucide-users service-tile-symbol",
+      "text": "",
+      "transitions": {}
+    },
+    {
+      "tag": "B",
+      "class": "",
+      "text": "Люди",
+      "transitions": {}
+    },
+    {
+      "tag": "BUTTON",
+      "class": "service-tile",
+      "text": "Выбор дисциплин",
+      "transitions": {
+        "box-shadow": {
+          "duration": 500,
+          "starts": [
+            462.734000000637
+          ]
+        }
+      }
+    },
+    {
+      "tag": "svg",
+      "class": "lucide lucide-book-open service-tile-symbol",
+      "text": "",
+      "transitions": {}
+    },
+    {
+      "tag": "B",
+      "class": "",
+      "text": "Выбор дисциплин",
+      "transitions": {}
+    },
+    {
+      "tag": "BUTTON",
+      "class": "service-tile service-tile-photo",
+      "text": "Общежития",
+      "transitions": {
+        "box-shadow": {
+          "duration": 500,
+          "starts": [
+            462.734000000637
+          ]
+        }
+      }
+    },
+    {
+      "tag": "B",
+      "class": "",
+      "text": "Общежития",
+      "transitions": {}
+    },
+    {
+      "tag": "DIV",
+      "class": "v-application v-theme--Dark",
+      "text": "РасписаниеУчёбаСервисыКонкурсный прототипКампусСер",
+      "transitions": {}
+    }
+  ]
+}

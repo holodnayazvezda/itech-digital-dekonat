@@ -1,0 +1,33 @@
+[data-image-pending] {
+  --image-skeleton-surface: var(--c-tone, #e5e4e0);
+  --image-skeleton-ink: color-mix(in srgb, var(--c-ink, #232321) 15%, var(--image-skeleton-surface));
+}
+
+[data-image-pending] .image-skeleton-text {
+  color: transparent;
+  text-shadow: none;
+  background: linear-gradient(var(--image-skeleton-ink), var(--image-skeleton-ink)) center / 100% .65em no-repeat;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+[data-image-pending] .image-skeleton-block {
+  background-color: var(--image-skeleton-surface);
+}
+
+[data-image-pending] img[data-image-state],
+[data-image-pending] .image-skeleton-icon,
+img[data-image-state="error"] {
+  visibility: hidden;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  [data-image-pending] .image-skeleton-text {
+    animation: image-skeleton-pulse 1.4s ease-in-out infinite alternate;
+  }
+
+  @keyframes image-skeleton-pulse {
+    from { opacity: .6; }
+    to { opacity: 1; }
+  }
+}

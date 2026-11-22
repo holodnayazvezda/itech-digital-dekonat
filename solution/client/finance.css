@@ -1,0 +1,88 @@
+.shell .workspace-start:has(.scholarship-view) { width:100%; max-width:1040px; margin-inline:auto; }
+.shell .workspace-start:has(.scholarship-view) > header { margin-bottom:24px; }
+.shell .workspace-start:has(.scholarship-view) > header h1 { font-size:30px; line-height:1.2; letter-spacing:-.035em; }
+.service-page .finance.scholarship-view { max-width:none; }
+.service-page .scholarship-view .pay-periods { gap:8px; margin-bottom:20px; }
+.scholarship-view .account-select-label { font-size:11px; }
+.service-page .scholarship-view .pay-periods > .account-select { width:94px; }
+.scholarship-view .account-select-trigger { min-height:36px; padding:8px 12px; font-size:12px; border:0; background:var(--c-card); }
+.service-page .scholarship-view .month-strip { min-width:0; background:var(--c-card); border-radius:20px; padding:4px; }
+.service-page .scholarship-view .month-strip button { min-height:32px; padding:7px 13px; border-radius:18px; font-size:12px; font-weight:500; }
+.scholarship-view .month-arrow { display:grid; place-items:center; flex:none; width:28px; height:36px; padding:0; border:0; background:transparent; color:var(--c-muted); }
+.finance-card-stack { position:relative; isolation:isolate; padding-top:28px; }
+.finance-card-stack::before,.finance-card-stack::after { content:""; position:absolute; border-radius:28px; border:1px solid #ffffff16; pointer-events:none; }
+.finance-card-stack::before { inset:0 28px 32px; z-index:-2; background:linear-gradient(120deg,#5c5269,#37313e); box-shadow:0 -4px 24px #0002; }
+.finance-card-stack::after { inset:13px 14px 16px; z-index:-1; background:radial-gradient(ellipse at 20% 30%,#b38567,#6c4c3e 55%,#3b3334); box-shadow:0 -2px 16px #0002; }
+.service-page .finance.scholarship-view .finance-total { position:relative; isolation:isolate; display:flex; flex-direction:column; align-items:stretch; gap:28px; min-height:290px; padding:26px 30px; border:1px solid #ffffff1f; border-radius:28px; overflow:hidden; background:linear-gradient(120deg,rgba(51,47,44,.83),rgba(27,26,26,.94)); -webkit-backdrop-filter:blur(22px) saturate(.7); backdrop-filter:blur(22px) saturate(.7); box-shadow:inset 0 1px 0 #ffffff12,0 16px 36px #0002; color:#fff; }
+.service-page .finance.scholarship-view .finance-total::before { content:""; position:absolute; inset:0; z-index:-1; pointer-events:none; background:radial-gradient(ellipse at 10% 0%,#e0c3a51a,transparent 60%); }
+.finance-card-top { display:flex; align-items:center; justify-content:space-between; gap:12px; font-size:12px; }
+.finance-card-top > span:first-child { display:flex; align-items:center; gap:8px; }
+.finance-card-month { padding:6px 11px; border:1px solid #ffffff21; border-radius:20px; background:#ffffff0c; text-transform:capitalize; font-size:11px; white-space:nowrap; }
+.service-page .scholarship-view .finance-total .finance-card-art { position:absolute; right:30px; top:68px; width:150px; height:150px; opacity:.13; transform:rotate(-12deg); z-index:-1; }
+.finance-card-amount { flex:1; display:flex; flex-direction:column; justify-content:center; }
+.service-page .scholarship-view .finance-total small { color:#ffffffb8; font-size:12px; }
+.service-page .finance.scholarship-view .finance-total b { margin:8px 0 0; font-family:inherit; font-size:48px; font-weight:500; line-height:1.1; letter-spacing:-.045em; font-variant-numeric:tabular-nums; }
+.finance-card-stats { display:flex; align-items:center; gap:32px; padding-top:18px; border-top:1px solid #ffffff26; }
+.finance-card-stats > div { display:flex; align-items:center; gap:10px; }
+.finance-card-stats > div > svg { color:#ffffffba; }
+.finance-card-stats span { font-size:10px; color:#ffffffb8; }
+.finance-card-stats strong { display:block; margin-top:3px; color:#fff; font-size:15px; font-weight:500; font-variant-numeric:tabular-nums; }
+.service-page .scholarship-view .pay-columns { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; margin-top:20px; }
+.service-page .scholarship-view .pay-columns > section { padding:22px; border-radius:24px; background:var(--c-card); }
+.service-page .scholarship-view .pay-columns h3 { margin:0 0 12px; font-size:15px; font-weight:500; }
+.service-page .scholarship-view .ledger > div { display:grid; grid-template-columns:34px minmax(0,1fr) auto; align-items:center; gap:12px; padding:16px 0; border-color:color-mix(in srgb,var(--c-ink) 7%,transparent); }
+.service-page .scholarship-view .ledger > div:last-child { border:0; padding-bottom:0; }
+.service-page .scholarship-view .ledger dt { font-size:12px; font-weight:400; line-height:1.5; }
+.service-page .scholarship-view .ledger dd { margin:0; font-family:inherit; font-size:13px; font-weight:500; white-space:nowrap; font-variant-numeric:tabular-nums; }
+.service-page .scholarship-view .ledger small { margin-top:4px; font-size:10px; color:var(--c-muted); line-height:1.5; }
+.finance-row-icon { display:grid; place-items:center; width:34px; height:34px; border-radius:12px; background:var(--c-tone); color:var(--c-muted); }
+.finance-transfers .finance-row-icon { background:color-mix(in srgb,#42ce8c 12%,var(--c-card)); color:#42ce8c; }
+.finance-transfers .finance-row-icon[data-planned="true"] { background:var(--c-tone); color:var(--c-muted); }
+.v-theme--Light .finance-transfers .finance-row-icon:not([data-planned="true"]) { color:#16734a; }
+.service-page .scholarship-view .pay-note { display:block; margin:18px 4px 0; font-size:10px; line-height:1.5; color:var(--c-muted); }
+@media(max-width:760px) {
+ .service-page .scholarship-view .pay-columns { grid-template-columns:1fr; gap:12px; }
+ .service-page .finance.scholarship-view .finance-total { padding:22px; min-height:270px; gap:24px; }
+ .finance-card-stack { padding-top:24px; }
+ .finance-card-stack::before { inset:0 20px 28px; }
+ .finance-card-stack::after { inset:12px 10px 14px; }
+ .service-page .finance.scholarship-view .finance-total b { font-size:40px; }
+ .service-page .finance.scholarship-view .finance-total .finance-card-art { right:-12px; top:72px; opacity:.09; }
+ .service-page .scholarship-view .pay-columns > section { padding:20px; }
+ .finance-card-stats { gap:24px; }
+ .finance-card-top { align-items:flex-start; }
+ .finance-card-top > span:first-child { max-width:130px; }
+ .finance-card-month { font-size:10px; }
+ .shell .workspace-start:has(.scholarship-view) > header h1 { font-size:27px; }
+}
+@media(prefers-reduced-motion:no-preference) {
+ .scholarship-view .finance-card-amount { animation:finance-amount-enter .3s ease both; }
+ @keyframes finance-amount-enter { from { opacity:.3; transform:translateY(4px); } to { opacity:1; transform:translateY(0); } }
+}
+.finance-balance-card { --balance-surface:#f6f6f5; --balance-border:#fff; --balance-ink:#141414; --balance-muted:#858585; --balance-button:#ebebea; --balance-hover:#dededc; }
+.v-theme--Dark .finance-balance-card { --balance-surface:#191919; --balance-border:#242424; --balance-ink:#f4f4f1; --balance-muted:#99999e; --balance-button:#2a2a2a; --balance-hover:#363636; }
+.service-page .finance.scholarship-view .finance-total.finance-balance-card { width:100%; max-width:520px; box-sizing:border-box; min-height:0; padding:22px; gap:24px; border:5px solid var(--balance-border); border-radius:40px; background:var(--balance-surface); color:var(--balance-ink); box-shadow:0 8px 24px #0000000a; backdrop-filter:none; -webkit-backdrop-filter:none; }
+.service-page .finance.scholarship-view .finance-total.finance-balance-card::before { display:none; }
+.finance-balance-card .finance-card-top { font-size:12px; font-weight:500; }
+.finance-balance-card .finance-card-month { padding:0; border:0; background:none; color:var(--balance-muted); font-size:10px; }
+.service-page .finance.scholarship-view .finance-balance-card b { margin:0; font-size:48px; font-weight:600; line-height:1; color:var(--balance-ink); }
+.service-page .finance.scholarship-view .finance-balance-card small { margin-top:8px; color:var(--balance-muted); font-size:10px; }
+.finance-card-actions { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+.finance-card-actions button { min-height:38px; padding:10px 16px; border-radius:999px; background:var(--balance-button); color:var(--balance-ink); font-size:12px; font-weight:500; transition:background-color .18s ease; }
+.finance-card-actions button:hover { background:var(--balance-hover); }
+.finance-card-actions button:focus-visible { outline:2px solid var(--balance-ink); outline-offset:2px; }
+.finance-withdraw-dialog { border:1px solid var(--c-line); border-radius:26px; background:var(--c-card); color:var(--c-ink); }
+.finance-withdraw-content { padding:24px; }
+.finance-withdraw-heading { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:24px; }
+.finance-withdraw-heading h2 { margin:0; font-size:18px; font-weight:500; }
+.finance-withdraw-heading .circle { width:32px; height:32px; background:var(--c-tone); color:var(--c-muted); }
+.finance-withdraw-content > strong { display:block; font-size:32px; font-weight:500; }
+.finance-withdraw-content p { margin:12px 0 20px; color:var(--c-muted); font-size:13px; line-height:1.6; }
+.finance-withdraw-content dl > div { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:10px 0; font-size:12px; }
+.finance-withdraw-content dt { color:var(--c-muted); }
+.finance-withdraw-content dd { margin:0; }
+.finance-history-action { width:100%; padding:12px; margin-top:20px; border-radius:22px; color:var(--c-surface); background:var(--c-ink); font-size:13px; }
+@media(max-width:600px) {
+ .service-page .finance.scholarship-view .finance-total.finance-balance-card { padding:18px; gap:22px; border-radius:36px; }
+ .service-page .finance.scholarship-view .finance-balance-card b { font-size:40px; }
+}

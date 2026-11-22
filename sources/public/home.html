@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="ru" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MGIMO AI Challenge | 2-й межвузовский промпт-хакатон</title>
+<meta name="description" content="MGIMO AI Challenge — 2-й межвузовский промпт-хакатон. Три номинации: ИИ-проект, Вайб-кодинг, ИИ-ролик. Призовой фонд 975 000 ₽. Для студентов всех вузов России.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MGIMO AI Challenge — 2-й межвузовский промпт-хакатон">
+<meta property="og:description" content="Три номинации, задания от партнёров, призовой фонд 975 000 ₽. Регистрация до 22 ноября 2026.">
+<meta property="og:url" content="https://challenge.mgimo.ai/">
+<meta property="og:image" content="https://challenge.mgimo.ai/img/og.png">
+<meta name="theme-color" content="#0b0716">
+<link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/Unbounded-900-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/Unbounded-900-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css?v=0.13.6">
+<link rel="stylesheet" href="/css/tokens.css?v=0.13.6">
+<link rel="stylesheet" href="/css/base.css?v=0.13.6">
+<link rel="stylesheet" href="/css/components.css?v=0.13.6">
+<link rel="stylesheet" href="/css/landing.css?v=0.13.6"></head>
+<body class="public">
+<a class="skip" href="#main">К содержанию</a>
+<header class="site-header">
+  <div class="wrap glass glass-pill">
+    <a class="logo" href="/" aria-label="MGIMO AI Challenge — на главную">MGIMO<span class="x">×</span>AI<br>CHALLENGE</a>
+    <nav class="site-nav" aria-label="Разделы">
+      <a href="/#nominations">Номинации</a>
+      <a href="/#how">Как участвовать</a>
+      <a href="/#prizes">Призы</a>
+      <a href="/#jury">Жюри</a>
+      <a href="/#partners">Партнёры</a>
+      <a href="/#results-2025">Итоги 2025</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <div class="site-actions">
+      <a class="btn btn-ghost" href="/login">Личный кабинет</a>
+<a class="btn btn-primary" href="/register">Регистрация</a>      
+      <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-controls="site-menu" aria-expanded="false" data-site-menu-btn><svg class="ico i-open" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg><svg class="ico i-close" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+  </div>
+  
+  <nav class="site-menu" id="site-menu" aria-label="Разделы сайта" hidden data-site-menu>
+    <div class="site-menu-panel glass">
+      <a href="/#nominations">Номинации</a>
+      <a href="/#how">Как участвовать</a>
+      <a href="/#prizes">Призы</a>
+      <a href="/#jury">Жюри</a>
+      <a href="/#partners">Партнёры</a>
+      <a href="/#results-2025">Итоги 2025</a>
+      <a href="/#faq">FAQ</a>
+      <a class="btn btn-ghost site-menu-login" href="/login">Личный кабинет</a>
+    </div>
+  </nav>
+</header>
+<script src="/js/site-menu.js?v=0.13.6" defer></script>
+<main id="main" class="page">
+<div class="page-bg" aria-hidden="true"><span class="orb orb-mint b1"></span><span class="orb orb-flame b2"></span><span class="orb orb-sun b3"></span><span class="orb orb-lime b4"></span><span class="orb orb-mint b5"></span><span class="orb orb-lime b6"></span></div>
+
+<aside class="incident" aria-label="Сбой у хостинга"><div class="wrap">
+  <p class="incident-box"><span class="incident-dot" aria-hidden="true"></span><span><b>Сайт переехал после сбоя у хостинга.</b> Регистрировался до 30 октября, 16:30 МСК — <a href="/login">войди по e-mail</a>, пришлём ссылку для нового пароля. Позже — <a href="/register">зарегистрируйся заново</a>.</span></p>
+</div></aside>
+
+
+<section class="hero" id="top" data-phase="tasks_published">
+  <div class="fog" aria-hidden="true"></div>
+  <canvas id="hero-gl" class="hero-gl" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <ul class="hero-orgs" aria-label="Организаторы">
+      <li><img class="org-priority" src="/img/brand/priority.webp" width="950" height="120" alt="Приоритет-2030"></li>
+      <li><img class="org-imip" src="/img/brand/imip.webp" width="496" height="120" alt="Институт маркетинга и предпринимательства МГИМО"></li>
+      <li><img class="org-genai" src="/img/brand/genai-center.webp" width="402" height="120" alt="Центр генеративных нейросетей"></li>
+    </ul>
+    <h1>MGIMO<span class="x">×</span>AI<br>CHALLENGE</h1>
+    <p class="lead">2-й межвузовский промпт-хакатон в области маркетинга и бизнеса с призовым фондом <b>975 000&nbsp;руб.</b></p>
+    <div class="hero-grid">
+      <div>
+        <div class="hero-cta">
+          <a class="btn btn-primary btn-lg" href="/register">Зарегистрироваться</a>
+          <a class="btn btn-ghost btn-lg" href="#nominations">Выбрать номинацию</a>
+        </div>
+        <p class="hero-slogan">Мастерски используешь ИИ? <b>Получай призы!</b></p>
+      </div>
+      <div class="timer glass c-mint" data-countdown="2026-11-22T20:59:59.000Z" data-label="До дедлайна приёма работ">
+        <div class="liquid" aria-hidden="true"></div>
+        <div class="timer-head">
+          <span class="pulse" aria-hidden="true"></span>
+          <small>До дедлайна приёма работ</small>
+          <time datetime="2026-11-22T20:59:59.000Z">22 ноября, 23:59 МСК</time>
+        </div>
+        <div class="digits" aria-live="off">
+          <div class="cell"><b data-cd="days">02</b><span data-cd-label="days">дня</span></div>
+          <i class="colon" aria-hidden="true"></i>
+          <div class="cell"><b data-cd="hours">19</b><span data-cd-label="hours">часов</span></div>
+          <i class="colon" aria-hidden="true"></i>
+          <div class="cell"><b data-cd="minutes">48</b><span data-cd-label="minutes">минут</span></div>
+          <i class="colon" aria-hidden="true"></i>
+          <div class="cell secs"><b data-cd="seconds">30</b><span>сек</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="sec" id="nominations">
+  <div class="wrap">
+    <h2 class="h2">3<span class="x x-mint">×</span>Номинации</h2>
+
+    <p class="sub">Участвуй в одной, двух или во всех трёх. Задания партнёров — в личном кабинете, работы принимаем до 22 ноября, 23:59 МСК.</p>
+    <div class="noms">
+      <article class="nom glass tilt c-mint" id="nom-ai-project">
+        <div class="liquid" aria-hidden="true"></div><canvas class="nom-gl" data-shape="0" width="120" height="120" aria-hidden="true"></canvas><span class="gem" aria-hidden="true"></span>
+        <div>
+          <div class="tag">Номинация 01</div>
+          <h3>ИИ-проект</h3>
+          <p>Реши прикладную задачу маркетинга или бизнеса с помощью промптов, агентов и ИИ-инструментов. Важен результат и воспроизводимость.</p>
+        </div>
+        <div>
+          <div class="prizes"><div><span>1 место</span><b>150 000 ₽</b></div><div><span>2 место</span><b>100 000 ₽</b></div><div><span>3 место</span><b>75 000 ₽</b></div></div>
+          <div class="when">Задание партнёра опубликовано — в личном кабинете</div>
+        </div>
+      </article>
+      <article class="nom glass tilt c-lime" id="nom-vibe-coding">
+        <div class="liquid" aria-hidden="true"></div><canvas class="nom-gl" data-shape="1" width="120" height="120" aria-hidden="true"></canvas><span class="gem" aria-hidden="true"></span>
+        <div>
+          <div class="tag">Номинация 02</div>
+          <h3>Вайб-кодинг</h3>
+          <p>Собери работающий продукт: сайт, бот или сервис — вместе с ИИ-ассистентами. Программировать уметь не обязательно.</p>
+        </div>
+        <div>
+          <div class="prizes"><div><span>1 место</span><b>150 000 ₽</b></div><div><span>2 место</span><b>100 000 ₽</b></div><div><span>3 место</span><b>75 000 ₽</b></div></div>
+          <div class="when">Задание партнёра опубликовано — в личном кабинете</div>
+        </div>
+      </article>
+      <article class="nom glass tilt c-peach" id="nom-ai-video">
+        <div class="liquid" aria-hidden="true"></div><canvas class="nom-gl" data-shape="2" width="120" height="120" aria-hidden="true"></canvas><span class="gem" aria-hidden="true"></span>
+        <div>
+          <div class="tag">Номинация 03</div>
+          <h3>ИИ-ролик</h3>
+          <p>Создай видео по брифу партнёра генеративными инструментами: идея, сторителлинг, картинка, звук.</p>
+        </div>
+        <div>
+          <div class="prizes"><div><span>1 место</span><b>150 000 ₽</b></div><div><span>2 место</span><b>100 000 ₽</b></div><div><span>3 место</span><b>75 000 ₽</b></div></div>
+          <div class="when">Задание партнёра опубликовано — в личном кабинете</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<section class="sec" id="prizes">
+  <div class="wrap">
+    <p class="big"><span data-count-to="975">975</span><span class="x x-sun">×</span>000 ₽<small class="nocaps">Общий призовой фонд в 3 номинациях</small></p>
+    <div class="ptable">
+      <div class="pt glass tilt c-sun"><div class="liquid" aria-hidden="true"></div><em class="pt-x" aria-hidden="true"><span class="x">×</span>3</em><span>1 место · победитель</span><b><span data-count-to="150">150</span>&#8239;000 ₽</b><i>в каждой из 3 номинаций</i></div>
+      <div class="pt glass tilt"><div class="liquid" aria-hidden="true"></div><em class="pt-x" aria-hidden="true"><span class="x">×</span>3</em><span>2 место · призёр</span><b><span data-count-to="100">100</span>&#8239;000 ₽</b><i>в каждой из 3 номинаций</i></div>
+      <div class="pt glass tilt"><div class="liquid" aria-hidden="true"></div><em class="pt-x" aria-hidden="true"><span class="x">×</span>3</em><span>3 место · призёр</span><b><span data-count-to="75">75</span>&#8239;000 ₽</b><i>в каждой из 3 номинаций</i></div>
+    </div>
+    <p class="pnote">Гранты являются безусловными. Одна команда может занять места сразу в нескольких номинациях.</p>
+  </div>
+</section>
+
+
+<section class="sec" id="how">
+  <div class="wrap">
+    <h2 class="h2">Как<span class="x x-lime">×</span>участвовать</h2>
+
+    <div class="steps">
+      <div class="step glass tilt"><div class="liquid" aria-hidden="true"></div><span class="n">Шаг 1</span><h4>Зарегистрируйся</h4><p>Получи доступ в <a href="/cabinet">личный кабинет</a>, собери команду до 3 человек и подключи уведомления в Telegram.</p><span class="date">22.10.2026 — 22.11.2026</span></div>
+      <div class="step glass tilt"><div class="liquid" aria-hidden="true"></div><span class="n">Шаг 2</span><h4>Сделай работу</h4><p>Задания партнёров уже в кабинете. Отправь работу в одной или нескольких номинациях.</p><span class="date">04.11.2026 — 22.11.2026, 23:59</span></div>
+      <div class="step glass tilt"><div class="liquid" aria-hidden="true"></div><span class="n">Шаг 3</span><h4>Жди вердикта</h4><p>Жюри объявит победителей, мы свяжемся с ними для оформления грантов. Каждый участник получит <strong>электронный сертификат</strong>.</p><span class="date">28.11.2026</span></div>
+    </div>
+  </div>
+</section>
+
+
+<section class="sec" id="jury">
+  <div class="wrap">
+    <h2 class="h2">Жю<span class="x x-peach">×</span>ри</h2>
+
+    <div class="jury">
+      <figure class="juror c-mint">
+        <div class="photo tilt"><img src="/img/jury/dolbnev.jpg" alt="Александр Долбнев" loading="lazy" width="400" height="400"><span class="shine" aria-hidden="true"></span></div>
+        <figcaption><b>Александр Долбнев</b><span>Head of AI/ML Sales &amp; Business Development, Yandex Cloud</span></figcaption>
+      </figure>
+      <figure class="juror c-mint">
+        <div class="photo tilt"><img src="/img/jury/sologub.jpg" alt="Денис Сологуб" loading="lazy" width="400" height="400"><span class="shine" aria-hidden="true"></span></div>
+        <figcaption><b>Денис Сологуб</b><span>Президент розничной торговой сети, «Азбука вкуса»</span></figcaption>
+      </figure>
+      <figure class="juror c-mint">
+        <div class="photo tilt"><img src="/img/jury/klepikov.jpg" alt="Олег Клепиков" loading="lazy" width="400" height="400"><span class="shine" aria-hidden="true"></span></div>
+        <figcaption><b>Олег Клепиков</b><span>Управляющий директор по анализу поведения клиентов «МегаФон», зав. Лабораторией нейромаркетинга МГИМО</span></figcaption>
+      </figure>
+      <figure class="juror c-mint">
+        <div class="photo tilt"><img src="/img/jury/gramolina.jpg" alt="Ольга Грамолина" loading="lazy" width="400" height="400"><span class="shine" aria-hidden="true"></span></div>
+        <figcaption><b>Ольга Грамолина</b><span>Управляющий директор, BBDO</span></figcaption>
+      </figure>
+      <figure class="juror c-mint">
+        <div class="photo tilt"><img src="/img/jury/shubenok.jpg" alt="Денис Шубенок" loading="lazy" width="400" height="400"><span class="shine" aria-hidden="true"></span></div>
+        <figcaption><b>Денис Шубенок</b><span>Исполнительный директор, «Ашманов и партнёры»</span></figcaption>
+      </figure>
+      <figure class="juror c-mint">
+        <div class="photo tilt"><img src="/img/jury/vasileva.jpg" alt="Анастасия Васильева" loading="lazy" width="400" height="400"><span class="shine" aria-hidden="true"></span></div>
+        <figcaption><b>Анастасия Васильева</b><span>Управляющий директор, Tilda Publishing</span></figcaption>
+      </figure>
+      <figure class="juror c-mint">
+        <div class="photo tilt"><img src="/img/jury/bruman.jpg?v=2" alt="Мира Бруман" loading="lazy" width="400" height="400"><span class="shine" aria-hidden="true"></span></div>
+        <figcaption><b>Мира Бруман</b><span>Основатель, Tonka Perfumes</span></figcaption>
+      </figure>
+      <figure class="juror c-mint">
+        <div class="photo tilt"><img src="/img/jury/filatov.jpg" alt="Алексей Филатов" loading="lazy" width="400" height="400"><span class="shine" aria-hidden="true"></span></div>
+        <figcaption><b>Алексей Филатов</b><span>Основатель, Академия ритейла</span></figcaption>
+      </figure>
+      <figure class="juror c-mint">
+        <div class="photo tilt"><img src="/img/jury/khotyasheva.jpg" alt="Ольга Хотяшева" loading="lazy" width="400" height="400"><span class="shine" aria-hidden="true"></span></div>
+        <figcaption><b>Ольга Хотяшева</b><span>Директор Института маркетинга и предпринимательства, МГИМО</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+
+<section class="sec" id="partners">
+  <div class="wrap">
+    <h2 class="h2">Парт<span class="x x-sun">×</span>нёры</h2>
+
+    <ul class="plogos" aria-label="Партнёры конкурса">
+      
+      <li class="plogo-yandex-cloud"><img src="/img/partners/yandex-cloud.svg" alt="Яндекс Облако" loading="lazy"></li>
+      
+      <li class="plogo-megafon"><img src="/img/partners/megafon.svg" alt="МегаФон" loading="lazy"></li>
+      
+      <li class="plogo-azbuka-vkusa"><img src="/img/partners/azbuka-vkusa.svg" alt="Азбука вкуса" loading="lazy"></li>
+      
+      <li class="plogo-ashmanov"><img src="/img/partners/ashmanov.svg" alt="Ашманов и партнёры" loading="lazy"></li>
+      
+      <li class="plogo-tilda"><img src="/img/partners/tilda.svg" alt="Tilda Publishing" loading="lazy"></li>
+      
+      <li class="plogo-retail-academy"><img src="/img/partners/retail-academy.svg" alt="Академия ритейла" loading="lazy"></li>
+      
+      <li class="plogo-bbdo"><img src="/img/partners/bbdo.svg" alt="BBDO" loading="lazy"></li>
+      
+      <li class="plogo-tonka"><img src="/img/partners/tonka.svg" alt="Tonka Perfumes" loading="lazy"></li>
+      
+      <li class="plogo-neurolab"><img src="/img/partners/neurolab.svg" alt="Лаборатория нейромаркетинга МГИМО" loading="lazy"></li>
+      
+      <li class="plogo-endowment"><img src="/img/partners/endowment.svg" alt="Эндаумент МГИМО" loading="lazy"></li>
+    </ul>
+  </div>
+</section>
+
+
+<section class="sec" id="results-2025">
+  <div class="wrap">
+    <h2 class="h2">Итоги<span class="x x-mint">×</span>2025</h2>
+
+    <p class="sub">Первый сезон прошёл как MGIMO GPT Challenge: отборочный тур, финал и 12 призовых мест.</p>
+    <div class="res-stats">
+      <div><b>659</b><span>участников</span></div>
+      <div><b>69</b><span>вузов</span></div>
+      <div><b>12</b><span>победителей и призёров</span></div>
+      <div><b>900 000 ₽</b><span>призовой фонд</span></div>
+    </div>
+    <ol class="winners">
+
+<li class="glass tilt top">
+  <div class="liquid" aria-hidden="true"></div>
+  <span class="ulogo" aria-hidden="true"><img class="ul-central_university_0" src="/img/2025/logos/central_university_0.png" alt="" decoding="async" fetchpriority="low"></span>
+  <span class="place">1 место</span>
+  <span class="faces"><img src="/img/2025/winners/novitskiy.jpg" alt="" width="56" height="56" loading="lazy"></span>
+  <span class="who"><b>Никита Новицкий</b><small>Центральный университет</small></span>
+<span class="meta"><span class="sum">200 000 ₽</span></span></li>
+
+<li class="glass tilt podium">
+  <div class="liquid" aria-hidden="true"></div>
+  <span class="ulogo" aria-hidden="true"><img class="ul-ugu-2" src="/img/2025/logos/ugu-2.png" alt="" decoding="async" fetchpriority="low"></span>
+  <span class="place">2 место</span>
+  <span class="faces"><img src="/img/2025/winners/krivilev.jpg" alt="" width="56" height="56" loading="lazy"></span>
+  <span class="who"><b>Алексей Кривилев</b><small>Удмуртский государственный университет</small></span>
+<span class="meta"><span class="sum">100 000 ₽</span></span></li>
+
+<li class="glass tilt podium team">
+  <div class="liquid" aria-hidden="true"></div>
+  <span class="ulogo" aria-hidden="true"><img class="ul-vshe-2" src="/img/2025/logos/vshe-2.png" alt="" decoding="async" fetchpriority="low"></span>
+  <span class="place">3 место</span>
+  <span class="faces"><img src="/img/2025/winners/knyazev.jpg" alt="" width="56" height="56" loading="lazy"><img src="/img/2025/winners/nikonov.jpg" alt="" width="56" height="56" loading="lazy"><img src="/img/2025/winners/antopkin.jpg" alt="" width="56" height="56" loading="lazy"></span>
+  <span class="who"><b>Федор Князев, Владимир Никонов, Олег Антопкин</b><small>Высшая школа экономики</small></span>
+<span class="meta"><span class="sum">100 000 ₽</span></span></li>
+
+<li class="glass tilt podium">
+  <div class="liquid" aria-hidden="true"></div>
+  <span class="ulogo" aria-hidden="true"><img class="ul-fu_002-2" src="/img/2025/logos/fu_002-2.png" alt="" decoding="async" fetchpriority="low"></span>
+  <span class="place">4 место</span>
+  <span class="faces"><img src="/img/2025/winners/miroshnik.jpg" alt="" width="56" height="56" loading="lazy"></span>
+  <span class="who"><b>Владимир Мирошник</b><small>Финансовый университет</small></span>
+<span class="meta"><span class="sum">100 000 ₽</span></span></li>
+
+<li class="glass tilt">
+  <div class="liquid" aria-hidden="true"></div>
+  <span class="ulogo" aria-hidden="true"><img class="ul-mip_002-2" src="/img/2025/logos/mip_002-2.png" alt="" decoding="async" fetchpriority="low"></span>
+  <span class="place">5 место</span>
+  <span class="faces"><img src="/img/2025/winners/sura.jpg" alt="" width="56" height="56" loading="lazy"></span>
+  <span class="who"><b>Яна Сура</b><small>Московский институт психоанализа</small></span>
+<span class="meta"><span class="sum">50 000 ₽</span></span></li>
+
+<li class="glass tilt">
+  <div class="liquid" aria-hidden="true"></div>
+  <span class="ulogo" aria-hidden="true"><img class="ul-mgimo-2" src="/img/2025/logos/mgimo-2.png" alt="" decoding="async" fetchpriority="low"></span>
+  <span class="place">6 место</span>
+  <span class="faces"><img src="/img/2025/winners/kormilitsyna.jpg" alt="" width="56" height="56" loading="lazy"></span>
+  <span class="who"><b>Екатерина Кормилицына</b><small>МГИМО МИД России</small></span>
+<span class="meta"><span class="sum">50 000 ₽</span></span></li>
+
+<li class="glass tilt">
+  <div class="liquid" aria-hidden="true"></div>
+  <span class="ulogo" aria-hidden="true"><img class="ul-mfti-2" src="/img/2025/logos/mfti-2.png" alt="" decoding="async" fetchpriority="low"></span>
+  <span class="place">7 место</span>
+  <span class="faces"><img src="/img/2025/winners/korablin.jpg" alt="" width="56" height="56" loading="lazy"></span>
+  <span class="who"><b>Леонид Кораблин</b><small>Московский физико-технический институт</small></span>
+<span class="meta"><span class="sum">50 000 ₽</span></span></li>
+
+<li class="glass tilt">
+  <div class="liquid" aria-hidden="true"></div>
+  <span class="ulogo" aria-hidden="true"><img class="ul-mgimo-2" src="/img/2025/logos/mgimo-2.png" alt="" decoding="async" fetchpriority="low"></span>
+  <span class="place">8 место</span>
+  <span class="faces"><img src="/img/2025/winners/plotnikova.jpg" alt="" width="56" height="56" loading="lazy"></span>
+  <span class="who"><b>Анастасия Плотникова</b><small>МГИМО МИД России</small></span>
+<span class="meta"><span class="sum">50 000 ₽</span></span></li>
+
+<li class="glass tilt">
+  <div class="liquid" aria-hidden="true"></div>
+  <span class="ulogo" aria-hidden="true"><img class="ul-mirea-2" src="/img/2025/logos/mirea-2.png" alt="" decoding="async" fetchpriority="low"></span>
+  <span class="place">9 место</span>
+  <span class="faces"><img src="/img/2025/winners/bakshaev.jpg" alt="" width="56" height="56" loading="lazy"></span>
+  <span class="who"><b>Сергей Бакшаев</b><small>РТУ МИРЭА</small></span>
+<span class="meta"><span class="sum">50 000 ₽</span></span></li>
+
+<li class="glass tilt team">
+  <div class="liquid" aria-hidden="true"></div>
+  <span class="ulogo" aria-hidden="true"><img class="ul-mgtu-2" src="/img/2025/logos/mgtu-2.png" alt="" decoding="async" fetchpriority="low"><img class="ul-mtusi_emblem" src="/img/2025/logos/mtusi_emblem.png" alt="" decoding="async" fetchpriority="low"></span>
+  <span class="place">10 место</span>
+  <span class="faces"><img src="/img/2025/winners/lukin.jpg" alt="" width="56" height="56" loading="lazy"><img src="/img/2025/winners/korolev.jpg" alt="" width="56" height="56" loading="lazy"><img src="/img/2025/winners/zhilin.jpg" alt="" width="56" height="56" loading="lazy"></span>
+  <span class="who"><b>Константин Лукин, Артем Королев, Сергей Жилин</b><small>МГТУ им. Н.Э. Баумана, МТУСИ</small></span>
+<span class="meta"><span class="sum">50 000 ₽</span></span></li>
+
+<li class="glass tilt">
+  <div class="liquid" aria-hidden="true"></div>
+  <span class="ulogo" aria-hidden="true"><img class="ul-mgimo-2" src="/img/2025/logos/mgimo-2.png" alt="" decoding="async" fetchpriority="low"></span>
+  <span class="place">11 место</span>
+  <span class="faces"><img src="/img/2025/winners/female_person.png" alt="" width="56" height="56" loading="lazy"></span>
+  <span class="who"><b>Алина Хабирова</b><small>МГИМО МИД России</small></span>
+<span class="meta"><span class="sum">50 000 ₽</span></span></li>
+
+<li class="glass tilt">
+  <div class="liquid" aria-hidden="true"></div>
+  <span class="ulogo" aria-hidden="true"><img class="ul-mgimo-2" src="/img/2025/logos/mgimo-2.png" alt="" decoding="async" fetchpriority="low"></span>
+  <span class="place">12 место</span>
+  <span class="faces"><img src="/img/2025/winners/trapeznikova.jpg" alt="" width="56" height="56" loading="lazy"></span>
+  <span class="who"><b>Лидия Трапезникова</b><small>МГИМО МИД России</small></span>
+<span class="meta"><span class="sum">50 000 ₽</span></span></li>
+    </ol>
+  </div>
+</section>
+
+
+<section class="sec" id="faq">
+  <div class="wrap">
+    <h2 class="h2">Вопросы<span class="x x-lime">×</span>ответы</h2>
+
+    
+    <div class="faq-layout">
+      <div class="faq-aside">
+        <p class="sub">Коротко о главном. Если вопрос остался — задай его организаторам в чате личного кабинета.</p>
+        <a class="btn btn-ghost" href="/cabinet/chat">Задать вопрос</a>
+      </div>
+      <div class="faq glass">
+        <details open><summary><span class="n" aria-hidden="true">01</span><span class="q">Кто может участвовать?</span></summary><div class="answer"><div class="answer-in">Студенты бакалавриата, специалитета, магистратуры и аспирантуры любого вуза России. Гуманитарии и технари — все.</div></div></details>
+        <details><summary><span class="n" aria-hidden="true">02</span><span class="q">Нужно ли уметь программировать?</span></summary><div class="answer"><div class="answer-in">Нет. В «ИИ-проекте» и «ИИ-ролике» код не нужен, а «Вайб-кодинг» для того и придуман, чтобы продукт делал человек, который умеет объяснять задачу ИИ.</div></div></details>
+        <details><summary><span class="n" aria-hidden="true">03</span><span class="q">Можно ли участвовать в нескольких номинациях?</span></summary><div class="answer"><div class="answer-in">Да, в любом количестве — хоть во всех трёх.</div></div></details>
+        <details><summary><span class="n" aria-hidden="true">04</span><span class="q">Можно ли командой?</span></summary><div class="answer"><div class="answer-in">Да, до 3 человек. Капитан регистрируется и добавляет остальных в личном кабинете. Состав команды общий для всех номинаций.</div></div></details>
+        <details><summary><span class="n" aria-hidden="true">05</span><span class="q">Когда появятся задания?</span></summary><div class="answer"><div class="answer-in">4 ноября 2026 года, сразу во всех номинациях — в личном кабинете. Подключи Telegram-уведомления, чтобы не пропустить.</div></div></details>
+        <details><summary><span class="n" aria-hidden="true">06</span><span class="q">Будет ли отборочный тур?</span></summary><div class="answer"><div class="answer-in">Нет. Одно задание в каждой номинации — и сразу финал.</div></div></details>
+        <details><summary><span class="n" aria-hidden="true">07</span><span class="q">До какого числа принимаются работы?</span></summary><div class="answer"><div class="answer-in">До 22 ноября 2026 года, 23:59 по Москве. До этого момента работу можно заменить — учитывается последняя версия.</div></div></details>
+        <details><summary><span class="n" aria-hidden="true">08</span><span class="q">Что получают победители?</span></summary><div class="answer"><div class="answer-in">В каждой номинации: 150 000 ₽ за 1 место, 100 000 ₽ за 2-е, 75 000 ₽ за 3-е. Гранты безусловные.</div></div></details>
+        <details><summary><span class="n" aria-hidden="true">09</span><span class="q">Получу ли я сертификат?</span></summary><div class="answer"><div class="answer-in">Да — каждый, кто отправил хотя бы одну работу, скачает сертификат участника в кабинете; призёры — именной сертификат призёра.</div></div></details>
+        <details><summary><span class="n" aria-hidden="true">10</span><span class="q">Как задать вопрос организаторам?</span></summary><div class="answer"><div class="answer-in">В личном кабинете есть чат с организаторами. Отвечаем в рабочее время, обычно в течение дня.</div></div></details>
+        <details><summary><span class="n" aria-hidden="true">11</span><span class="q">Всё онлайн?</span></summary><div class="answer"><div class="answer-in">Да, все этапы проходят онлайн.</div></div></details>
+        <details><summary><span class="n" aria-hidden="true">12</span><span class="q">Кому принадлежат права на созданные промпты?</span></summary><div class="answer"><div class="answer-in">Участие в хакатоне автоматически подразумевает, что все исключительные права на созданные вами в ходе конкурса решения и промпты переходят к Организатору. Мы сможем использовать их в дальнейших проектах, исследованиях и продуктах. Отправляя работу, вы соглашаетесь с этим условием.</div></div></details>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-brand">
+      <span class="logo">MGIMO<span class="x">×</span>AI<br>CHALLENGE</span>
+      <p>© 2026 Институт маркетинга и предпринимательства МГИМО МИД России<br>119454, Москва, пр-кт Вернадского, 76к3</p>
+    </div>
+    <nav class="foot-nav" aria-label="Документы">
+      <a href="/rules">Регламент</a>
+      <a href="/policy">Политика конфиденциальности</a>
+      <a href="https://t.me/mgimogpt" rel="noopener" target="_blank">Telegram-канал</a>
+      <a href="/#results-2025">Итоги 2025</a>
+    </nav>
+    <div class="foot-meta"><code>v0.13.6</code></div>
+  </div>
+</footer>
+
+<div class="cookie-banner glass" role="region" aria-label="Уведомление о cookie" data-cookie-banner hidden>
+  <p>Сайт использует файлы cookie и Яндекс Метрику, чтобы работать и становиться удобнее. Продолжая пользоваться сайтом, ты соглашаешься с этим. Подробнее — в <a href="/policy#cookie">политике обработки персональных данных</a>.</p>
+  <button class="btn btn-primary" type="button" data-cookie-ok>Понятно</button>
+</div>
+<script src="/js/cookie-banner.js?v=0.13.6" defer></script>
+
+<script src="/js/metrika.js?v=0.13.6" data-id="113739078" defer></script>
+<noscript><div><img class="ym-pixel" src="https://mc.yandex.ru/watch/113739078" alt=""></div></noscript>
+<script type="module" src="/js/countdown.js?v=0.13.6"></script>
+<script type="module" src="/js/counters.js?v=0.13.6"></script>
+<script type="module" src="/js/glass.js?v=0.13.6"></script>
+<script type="module" src="/js/tilt.js?v=0.13.6"></script>
+<script type="module" src="/js/faq.js?v=0.13.6"></script>
+<script type="module" src="/js/app.js?v=0.13.6"></script>
+<script type="module" src="/js/hero-3d.js?v=0.13.6"></script>
+<script type="module" src="/js/nom-3d.js?v=0.13.6"></script>
+</body>
+</html>

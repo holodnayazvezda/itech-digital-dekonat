@@ -1,0 +1,34 @@
+{
+  "Light": {
+    "surface": "#F7F5EC",
+    "card": "#FFFEF7",
+    "ink": "#152F29",
+    "muted": "#54665B",
+    "line": "#CED1BE",
+    "brand": "#27674F",
+    "onBrand": "#FFFFFF",
+    "hero": "#103F34",
+    "heroInk": "#FBF4DD",
+    "lime": "#F8B296",
+    "limeInk": "#47251D",
+    "soft": "#DAE9D9",
+    "softInk": "#214C39",
+    "tone": "#EAEBDD"
+  },
+  "Dark": {
+    "surface": "#14221F",
+    "card": "#1D302A",
+    "ink": "#F4EDD9",
+    "muted": "#B5C2B4",
+    "line": "#40524A",
+    "brand": "#ACD9B4",
+    "onBrand": "#17372B",
+    "hero": "#0C382F",
+    "heroInk": "#FBF4DD",
+    "lime": "#79483A",
+    "limeInk": "#FFDDCA",
+    "soft": "#2A493B",
+    "softInk": "#D7EACC",
+    "tone": "#24392F"
+  }
+}

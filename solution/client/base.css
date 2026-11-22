@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+  line-height: 1.5;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+button {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+button:disabled {
+  cursor: default;
+}
+[hidden] {
+  display: none !important;
+}
+.v-application {
+  --radius-control: 8px;
+  --radius-dialog: 16px;
+  color-scheme: light;
+}
+.v-theme--Dark { color-scheme: dark; }
+.v-icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+.v-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-button {
+  border-radius: 100%;
+  width: 42px;
+  height: 42px;
+}
+.campus-dialog {
+  margin: auto;
+  padding: 0;
+  width: calc(100% - 32px);
+  max-height: 90dvh;
+  border: 1px solid var(--c-line);
+  border-radius: var(--radius-dialog);
+  overflow: hidden;
+  background: var(--c-surface);
+  color: var(--c-ink);
+  overscroll-behavior: contain;
+}
+.campus-dialog::backdrop {
+  background: rgb(8 24 20 / 0.55);
+}
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+.campus-toast {
+  pointer-events: none;
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--c-ink);
+  color: var(--c-surface);
+  padding: 12px 18px;
+  border-radius: 8px;
+  z-index: 100;
+}
+.v-application {
+  min-height: 100dvh;
+  background: var(--c-surface);
+}
+@media (max-width: 680px) {
+  .campus-dialog {
+    margin: auto auto 0;
+    width: 100%;
+    max-height: 94dvh;
+    border-radius: var(--radius-dialog) var(--radius-dialog) 0 0;
+  }
+  .campus-toast {
+    bottom: 80px;
+    width: max-content;
+    max-width: 92vw;
+  }
+}
+.calendar-export {
+  display: grid;
+  gap: 18px;
+}
+.calendar-export fieldset {
+  border: 0;
+  display: grid;
+  gap: 8px;
+}
+.calendar-export legend {
+  margin-bottom: 6px;
+}
+.calendar-export input {
+  accent-color: var(--c-brand);
+}
+.calendar-export .campus-action:disabled {
+  opacity: 0.55;
+}
+
+.export-dates {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.export-dates input {
+  max-width: 100%;
+  min-width: 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .view,
+  .campus-dialog[open] > .sheet,
+  .sheet > article {
+    animation: campus-enter 0.16s ease-out;
+  }
+  @keyframes campus-enter {
+    from {
+      opacity: 0;
+      transform: translateY(4px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+.campus-toast {
+  width:max-content;
+  max-width:min(560px,calc(100vw - 32px));
+  padding:14px 20px;
+  border-radius:24px;
+  font-size:13px;
+  line-height:1.5;
+  box-shadow:0 8px 28px rgb(0 0 0 / .16);
+  animation:campus-toast-enter 260ms cubic-bezier(.2,.8,.2,1) both;
+}
+.campus-toast.toast-exiting { animation:campus-toast-exit 180ms ease-in both; }
+@keyframes campus-toast-enter { from { opacity:0; transform:translate(-50%,16px); } to { opacity:1; transform:translate(-50%,0); } }
+@keyframes campus-toast-exit { from { opacity:1; transform:translate(-50%,0); } to { opacity:0; transform:translate(-50%,8px); } }
+@media(prefers-reduced-motion:reduce) { .campus-toast,.campus-toast.toast-exiting { animation:none; } }

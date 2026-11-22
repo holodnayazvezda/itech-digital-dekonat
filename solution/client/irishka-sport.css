@@ -1,0 +1,8 @@
+.irishka-sport-upcoming { margin-bottom:8px; }
+.irishka-sport-upcoming > button { margin-top:3px; }
+.irishka-sport-row { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:7px 12px; padding:9px 0; border-top:1px solid var(--ic-line); }
+.irishka-sport-row > div { display:grid; min-width:0; gap:3px; }
+.irishka-sport-row strong { font-size:14px; font-weight:620; }
+.irishka-sport :where(.irishka-sport-time,.irishka-sport-note) { color:var(--ic-muted); font-size:12px; }
+.irishka-sport-status { color:var(--ic-muted); font-size:11px; font-weight:600; }
+.irishka-sport-error { color:var(--ic-muted); font-size:12px; }

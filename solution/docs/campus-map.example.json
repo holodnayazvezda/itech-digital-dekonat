@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "buildings": [{
+    "id": "science", "name": "Учебный павильон", "viewBox": [0, 0, 400, 200],
+    "entranceNode": "entry", "entryFloor": "1",
+    "connections": [["stairs-1", "stairs-2", "Лестница"]],
+    "floors": [
+      {
+        "id": "1", "name": "1 этаж", "outline": "M10 10H390V190H10Z",
+        "nodes": {"entry": [50, 100], "stairs-1": [330, 100]},
+        "links": [["entry", "stairs-1"]],
+        "places": [
+          {"id": "door", "kind": "entrance", "name": "Главный вход", "node": "entry", "anchor": [50, 100]},
+          {"id": "stair-hall-1", "kind": "stairs", "name": "Лестница", "node": "stairs-1", "anchor": [330, 100]}
+        ]
+      },
+      {
+        "id": "2", "name": "2 этаж", "outline": "M10 10H390V190H10Z",
+        "nodes": {"stairs-2": [330, 100], "turn": [140, 100], "door-201": [140, 80]},
+        "links": [["stairs-2", "turn"], ["turn", "door-201"]],
+        "places": [
+          {"id": "stair-hall-2", "kind": "stairs", "name": "Лестница", "node": "stairs-2", "anchor": [330, 100]},
+          {"id": "room-201", "kind": "class", "name": "Лаборатория", "code": "П-201", "node": "door-201", "anchor": [140, 45], "path": "M80 10H200V80H80Z"}
+        ]
+      }
+    ]
+  }]
+}

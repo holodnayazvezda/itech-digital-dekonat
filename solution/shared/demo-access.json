@@ -1,0 +1,10 @@
+{
+  "password": "CampusDemo2026!",
+  "accounts": [
+    {"id":"student","role":"Студент"},
+    {"id":"friend","role":"Студент"},
+    {"id":"teacher","role":"Преподаватель"},
+    {"id":"dean-data","role":"Декан"},
+    {"id":"office","role":"Сотрудник деканата"}
+  ]
+}
