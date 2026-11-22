@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {sports,sportSlots,sportSeatsLeft,nextSportDate} from '../shared/sports.js';
-import {timeText} from '../shared/campus-data.js';
+import {sports,sportSlots,sportSeatsLeft,nextSportDate} from '../src/shared/domain/sports.js';
+import {timeText} from '../src/shared/domain/campus-data.js';
 test('30 уникальных направлений с непротиворечивыми окнами общих площадок',()=>{
   assert.equal(sports.length,30);assert.equal(new Set(sports.map(s=>s.id)).size,30);
   for(const sport of sports){

@@ -105,7 +105,7 @@ test("холодный переход показывает скелетон то
     await page.getByRole("button", {name:"Учёба",exact:true}).click();
   }};
   const loader = page.getByRole("status", { name: "Загружаем зачётку" });
-  await holdRequest(page, "**/src/StudyGrades.jsx*", async () => {
+  await holdRequest(page, "**/src/features/study/StudyGrades.jsx*", async () => {
     await study.click();
     await expect(loader).toHaveAttribute("data-loading-layout", "grades");
     await expect(nav).toBeVisible();
@@ -129,7 +129,7 @@ test("единый скелетон сервисов остаётся до де�
   const loader = page.locator('[data-loading-layout="services"]');
   let initialLoader;
   let routeTiles;
-  await holdRequest(page, "**/src/ServiceCatalog.jsx*", async () => {
+  await holdRequest(page, "**/src/features/catalog/ServiceCatalog.jsx*", async () => {
     await nav.getByRole("button", { name: "Сервисы", exact: true }).click();
     await expect(loader).toBeVisible();
     initialLoader = await loader.elementHandle();

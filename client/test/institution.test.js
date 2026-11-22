@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
-import {directoryPeople as people, faculties, programs, departments, groupDirectory, teachingGroups, curriculum} from "../shared/university.js";
+import {directoryPeople as people, faculties, programs, departments, groupDirectory, teachingGroups, curriculum} from "../src/shared/domain/university.js";
 
 test("кафедры и программы имеют руководителей, учебные планы и группы всех курсов", () => {
   for (const faculty of faculties) {

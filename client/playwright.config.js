@@ -32,7 +32,7 @@ export default defineConfig({
   webServer: [
     {
       cwd: "..",
-      command: `server/.venv/bin/python -c "import tempfile, os, uvicorn; from pathlib import Path; db = tempfile.TemporaryDirectory(); os.environ['CAMPUS_DEMO_DB'] = str(Path(db.name) / 'test.sqlite'); from datetime import datetime; from zoneinfo import ZoneInfo; import server.clock; server.clock.now = lambda: datetime(2026, 11, 20, 9, 50, tzinfo=ZoneInfo('Europe/Moscow')); uvicorn.run('server.main:app', port=8261, access_log=False)"`,
+      command: `server/.venv/bin/python -c "import tempfile, os, uvicorn; from pathlib import Path; db = tempfile.TemporaryDirectory(); os.environ['CAMPUS_DEMO_DB'] = str(Path(db.name) / 'test.sqlite'); from datetime import datetime; from zoneinfo import ZoneInfo; import server.core.clock; server.core.clock.now = lambda: datetime(2026, 11, 20, 9, 50, tzinfo=ZoneInfo('Europe/Moscow')); uvicorn.run('server.main:app', port=8261, access_log=False)"`,
       env: { CAMPUS_MODE: "demo", CAMPUS_JURY_PREVIEW: "1" },
       url: "http://127.0.0.1:8261/health",
     },

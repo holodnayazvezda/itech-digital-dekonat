@@ -1,3 +1,4 @@
+from server.api.streaming import ChatStream
 import asyncio
 import io
 import json
@@ -6,8 +7,8 @@ from uuid import uuid4
 import pytest
 from starlette.requests import ClientDisconnect
 
-from server import irishka
-from server.assistant_provider import OpenAICompatible, ProviderError
+from server.assistant import conversations as irishka
+from server.infrastructure.ai.provider import OpenAICompatible, ProviderError
 from server.tests.test_api import client, login
 
 
@@ -40,10 +41,23 @@ def test_stream_calls_scoped_tools_and_persists_authoritative_blocks(client, mon
                 assert "campus_schedule" in {tool["function"]["name"] for tool in payload["tools"]}
                 return sse(
                     {"reasoning_content": "hidden reasoning"},
-                    {"tool_calls": [{"index": 0, "id": "campus-1", "function": {
-                        "name": "campus_schedule", "arguments": '{"start":"2026-',
-                    }}]},
-                    {"tool_calls": [{"index": 0, "function": {"arguments": '11-20","end":"2026-11-20"}'}}]},
+                    {
+                        "tool_calls": [
+                            {
+                                "index": 0,
+                                "id": "campus-1",
+                                "function": {
+                                    "name": "campus_schedule",
+                                    "arguments": '{"start":"2026-',
+                                },
+                            }
+                        ]
+                    },
+                    {
+                        "tool_calls": [
+                            {"index": 0, "function": {"arguments": '11-20","end":"2026-11-20"}'}}
+                        ]
+                    },
                 )
             if self.rounds == 2:
                 result = payload["messages"][-1]
@@ -66,8 +80,20 @@ def test_stream_calls_scoped_tools_and_persists_authoritative_blocks(client, mon
     assert response.headers["content-type"] == "application/x-ndjson"
     assert "hidden reasoning" not in response.text
     events = list(map(json.loads, response.text.splitlines()))
-    assert [event["type"] for event in events] == ["status", "status", "status", "delta", "delta", "blocks", "done"]
-    assert [event["state"] for event in events if event["type"] == "status"] == ["thinking", "tools", "answering"]
+    assert [event["type"] for event in events] == [
+        "status",
+        "status",
+        "status",
+        "delta",
+        "delta",
+        "blocks",
+        "done",
+    ]
+    assert [event["state"] for event in events if event["type"] == "status"] == [
+        "thinking",
+        "tools",
+        "answering",
+    ]
     result = events[-1]["chat"]
     reply = result["messages"][-1]
     assert reply["mode"] == "model" and reply["text"] == "Вот **расписание**."
@@ -76,7 +102,9 @@ def test_stream_calls_scoped_tools_and_persists_authoritative_blocks(client, mon
     assert block["type"] == "schedule" and block["start"] == "2026-11-20" and block["lessons"]
     assert client.get(base, headers=auth).json() == result
     assert client.post(route, headers=auth, json=request).json() == {"type": "done", "chat": result}
-    assert client.post(route, headers=auth, json={**request, "text": "Иной текст"}).status_code == 409
+    assert (
+        client.post(route, headers=auth, json={**request, "text": "Иной текст"}).status_code == 409
+    )
 
 
 def test_stream_replaces_an_interrupted_draft(client, monkeypatch):
@@ -116,7 +144,7 @@ def test_stream_keeps_finishing_after_disconnect():
         if message["type"] == "http.response.body":
             raise OSError("closed")
 
-    response = irishka.ChatStream(events())
+    response = ChatStream(events())
     with pytest.raises(ClientDisconnect):
         asyncio.run(response({"type": "http", "asgi": {"spec_version": "2.4"}}, receive, send))
     assert persisted and len(sent) == 2
@@ -151,17 +179,21 @@ def test_navigator_fallback_creates_search_route_and_document_blocks(client, mon
         return message["blocks"][0]
 
     people = block("Найди Машу")
-    assert people["type"] == "search" and any("Мария" in match["name"] for match in people["matches"])
+    assert people["type"] == "search" and any(
+        "Мария" in match["name"] for match in people["matches"]
+    )
     room = block("Найди аудиторию Б-108")
     assert room["type"] == "place" and room["place"]["code"] == "Б-108"
     path = block("Построй маршрут от Б-108 до Б-412")
     assert path["type"] == "route" and path["from"]["id"] != path["to"]["id"]
     documents = block("Открой форму справки об обучении")
-    assert documents["type"] == "documents" and documents["forms"][0]["name"] == "Справка об обучении"
+    assert (
+        documents["type"] == "documents" and documents["forms"][0]["name"] == "Справка об обучении"
+    )
 
 
 def test_sports_chat_suggests_real_slots_books_explicitly_and_finds_own_route(client, monkeypatch):
-    from server.sports import SPORTS
+    from server.application.sports import SPORTS
 
     monkeypatch.setattr(irishka, "configured_provider", lambda: None)
     monkeypatch.setitem(SPORTS["strength"], "capacity", 1)
@@ -182,13 +214,24 @@ def test_sports_chat_suggests_real_slots_books_explicitly_and_finds_own_route(cl
     assert block["type"] == "sports" and len(block["sessions"]) == 2 and not block["upcoming"]
     slot = block["sessions"][0]
     assert (slot["name"], slot["venue"], slot["date"], slot["time"], slot["available"]) == (
-        "Силовые тренировки", "Тренажёрный зал", "2026-11-23", "09:00", 1,
+        "Силовые тренировки",
+        "Тренажёрный зал",
+        "2026-11-23",
+        "09:00",
+        1,
     )
     selection = {key: slot[key] for key in ("sport", "short", "date", "time", "end")}
-    enrolled = client.post("/api/campus/request", headers=auth, json={"kind": "booking", **selection})
+    enrolled = client.post(
+        "/api/campus/request", headers=auth, json={"kind": "booking", **selection}
+    )
     assert enrolled.is_success and enrolled.json()["record"]["status"] == "pending"
     own = enrolled.json()["record"]
-    assert client.post("/api/campus/request", headers=auth, json={"kind": "booking", **selection}).status_code == 409
+    assert (
+        client.post(
+            "/api/campus/request", headers=auth, json={"kind": "booking", **selection}
+        ).status_code
+        == 409
+    )
 
     current = assistant(auth, "Покажи мои тренировки")["blocks"][0]
     assert [session["id"] for session in current["upcoming"]] == [own["id"]]
@@ -196,10 +239,14 @@ def test_sports_chat_suggests_real_slots_books_explicitly_and_finds_own_route(cl
     assert not assistant(friend, "Покажи мои тренировки")["blocks"][0]["upcoming"]
     routable = assistant(auth, "Построй маршрут на мою тренировку")
     assert "ждёт подтверждения" in routable["text"]
-    assert routable["blocks"][0]["type"] == "route" and routable["blocks"][0]["to"]["code"] == "Н-101"
+    assert (
+        routable["blocks"][0]["type"] == "route" and routable["blocks"][0]["to"]["code"] == "Н-101"
+    )
     assert not assistant(friend, "Построй маршрут на мою тренировку")["blocks"]
 
-    assert client.post("/api/campus/decision", headers=office, json={"id": own["id"], "status": "approved"}).is_success
+    assert client.post(
+        "/api/campus/decision", headers=office, json={"id": own["id"], "status": "approved"}
+    ).is_success
     available = assistant(friend, "Хочу на силовую тренировку 2026-11-23")["blocks"][0]["sessions"]
     assert [session["time"] for session in available] == ["11:00"]
 
@@ -211,9 +258,17 @@ def test_sport_tool_builds_card_with_the_model_and_limits_account_scope(client, 
             assert "campus_sports" in names
             assert not any("book" in name or "enroll" in name for name in names)
             if messages[-1]["role"] != "tool":
-                yield {"tool_calls": [{"id": "sports-1", "function": {
-                    "name": "campus_sports", "arguments": '{"sport":"футбол","scope":"available"}',
-                }}]}
+                yield {
+                    "tool_calls": [
+                        {
+                            "id": "sports-1",
+                            "function": {
+                                "name": "campus_sports",
+                                "arguments": '{"sport":"футбол","scope":"available"}',
+                            },
+                        }
+                    ]
+                }
             else:
                 slots = json.loads(messages[-1]["content"])["sessions"]
                 assert slots and all(slot["sport"] == "football" for slot in slots)
@@ -228,7 +283,9 @@ def test_sport_tool_builds_card_with_the_model_and_limits_account_scope(client, 
     assert reply["mode"] == "model" and reply["blocks"][0]["type"] == "sports"
 
 
-def test_following_a_subject_lookup_answers_who_teaches_and_puts_card_after_text(client, monkeypatch):
+def test_following_a_subject_lookup_answers_who_teaches_and_puts_card_after_text(
+    client, monkeypatch
+):
     monkeypatch.setattr(irishka, "configured_provider", lambda: None)
     auth = login(client, "student")
     chat = client.post("/api/campus/irishka/chats", headers=auth).json()
@@ -241,12 +298,15 @@ def test_following_a_subject_lookup_answers_who_teaches_and_puts_card_after_text
 
     prior = send("Найди предмет статистику")
     assert prior[-2]["blocks"][0]["matches"][0]["name"] == "Статистика"
+
     def unexpected_provider():
         pytest.fail("Для вопроса о преподавателе есть точные данные расписания")
 
     monkeypatch.setattr(irishka, "configured_provider", unexpected_provider)
     for prompt in (
-        "Кто её ведёт?", "Кто ведёт статистику?", "Кто преподаватель по статистике 23 ноября?",
+        "Кто её ведёт?",
+        "Кто ведёт статистику?",
+        "Кто преподаватель по статистике 23 ноября?",
         "Кто ведёт статистику в понедельник?",
     ):
         events = send(prompt)
@@ -272,9 +332,17 @@ def test_model_receives_authoritative_teacher_before_streaming_an_explanation(cl
         def stream(self, messages, tools, timeout):
             if messages[-1]["role"] != "tool":
                 assert "кто ведёт предмет" in messages[0]["content"]
-                yield {"tool_calls": [{"id": "subject-1", "function": {
-                    "name": "campus_search", "arguments": '{"category":"subjects","query":"статистику"}',
-                }}]}
+                yield {
+                    "tool_calls": [
+                        {
+                            "id": "subject-1",
+                            "function": {
+                                "name": "campus_search",
+                                "arguments": '{"category":"subjects","query":"статистику"}',
+                            },
+                        }
+                    ]
+                }
                 return
             found = json.loads(messages[-1]["content"])["matches"][0]
             assert found["teachers"][0]["name"] == "Лесова Вера Андреевна"
@@ -286,7 +354,9 @@ def test_model_receives_authoritative_teacher_before_streaming_an_explanation(cl
     auth = login(client, "student")
     chat = client.post("/api/campus/irishka/chats", headers=auth).json()
     endpoint = f"/api/campus/irishka/chats/{chat['id']}/messages/stream"
-    response = client.post(endpoint, headers=auth, json=turn("Уточни, пожалуйста, имя преподавателя статистики."))
+    response = client.post(
+        endpoint, headers=auth, json=turn("Уточни, пожалуйста, имя преподавателя статистики.")
+    )
     events = list(map(json.loads, response.text.splitlines()))
     assert [event["type"] for event in events][-4:] == ["delta", "delta", "blocks", "done"]
     reply = events[-1]["chat"]["messages"][-1]

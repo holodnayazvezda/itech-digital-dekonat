@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { availableRoomStarts, normalizeRoomQuery } from '../shared/booking-availability.js';
+import { availableRoomStarts, normalizeRoomQuery } from '../src/shared/domain/booking-availability.js';
 test('поиск помещений понимает латинские буквы, пробелы и разные дефисы',()=>{
  const normalized=normalizeRoomQuery('Переговорная Н-102');
  for(const query of ['Н102','H102','h 102','n-102','Н—102']) assert.ok(normalized.includes(normalizeRoomQuery(query)),query);

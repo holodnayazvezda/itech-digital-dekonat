@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {mapProjection} from '../src/map-projection.js';
+import {mapProjection} from '../src/features/navigation/map-projection.js';
 test('плоский вид сохраняет координаты, стены поднимаются вертикально при любом повороте',()=>{
   const flat=mapProjection([0,0,1200,700],0,0);
   assert.deepEqual(flat.matrix,[1,0,-0,1,0,0]);

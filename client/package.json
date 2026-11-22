@@ -1,7 +1,7 @@
 {
   "name": "itech-digital-dekanat",
   "version": "1.0.0",
-  "description": "Цифровой деканат · Vue Router и экраны React",
+  "description": "Цифровой деканат iTech · React",
   "scripts": {
     "dev": "node scripts/dev.js",
     "map:check": "node scripts/install-campus-map.js check",
@@ -32,9 +32,7 @@
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "react-markdown": "^10.1.0",
-    "remark-gfm": "^4.0.1",
-    "vue": "3.5.46",
-    "vue-router": "4.6.5"
+    "remark-gfm": "^4.0.1"
   },
   "engines": {
     "node": ">=24"

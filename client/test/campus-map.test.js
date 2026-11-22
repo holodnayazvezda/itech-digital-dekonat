@@ -1,9 +1,9 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
-import {parseAtlas, indexPlaces, findPlaces, entranceRoute, entryFloor, routeMidpoint} from "../src/campus-map.js";
-import {floorDirections} from "../src/campus-directions.js";
-import {rooms} from "../shared/campus-data.js";
+import {parseAtlas, indexPlaces, findPlaces, entranceRoute, entryFloor, routeMidpoint} from "../src/features/navigation/campus-map.js";
+import {floorDirections} from "../src/features/navigation/campus-directions.js";
+import {rooms} from "../src/shared/domain/campus-data.js";
 
 const raw = JSON.parse(readFileSync(new URL("../public/campus-map.json", import.meta.url), "utf8"));
 const atlas = parseAtlas(raw), entries=indexPlaces(atlas);
@@ -123,7 +123,7 @@ test("повороты и расстояния следуют графу эта�
 });
 
 test("маршрут между произвольными помещениями, обратно и через корпуса", async()=>{
-  const {placeRoute,campusRoute}=await import("../src/campus-map.js");
+  const {placeRoute,campusRoute}=await import("../src/features/navigation/campus-map.js");
   const from=entries.find(e=>e.place.code==="Б-108"),to=entries.find(e=>e.place.code==="Б-412");
   const forward=placeRoute(from.building,from.place,to.place),back=placeRoute(from.building,to.place,from.place);
   assert.ok(forward.length>1);

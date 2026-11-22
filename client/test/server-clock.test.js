@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { setServerClock, advanceServerClock, today, serverMinute } from "../shared/server-clock.js";
+import { setServerClock, advanceServerClock, today, serverMinute } from "../src/shared/domain/server-clock.js";
 
 test("дата и минута берутся из серверного ISO по Москве", () => {
   setServerClock({now:"2026-11-22T22:15:00Z", timezone:"Europe/Moscow"});

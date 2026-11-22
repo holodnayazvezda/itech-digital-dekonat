@@ -1,9 +1,9 @@
 import { readFileSync, writeFileSync } from "node:fs";
-import { allClasses, roomActivities, rooms, gym } from "../shared/campus-data.js";
-import { weekOf } from "../shared/timetable.js";
-import { directoryPeople, programNames, teachingGroups, transferRequirements } from "../shared/university.js";
+import { allClasses, roomActivities, rooms, gym } from "../src/shared/domain/campus-data.js";
+import { weekOf } from "../src/shared/domain/timetable.js";
+import { directoryPeople, programNames, teachingGroups, transferRequirements } from "../src/shared/domain/university.js";
 
-import { services } from "../shared/services.js";
+import { services } from "../src/shared/domain/services.js";
 
 const file = new URL("../../server/assets/campus.json", import.meta.url);
 const previous = readFileSync(file, "utf8");
@@ -37,6 +37,6 @@ if (output !== previous) writeFileSync(file, output);
 // Keep the API's static catalogues independent of frontend source paths.
 const {copyFileSync} = await import("node:fs");
 for (const name of ["demo-access.json", "search-names.json"])
-  copyFileSync(new URL("../shared/" + name, import.meta.url), new URL("../../server/assets/" + name, import.meta.url));
+  copyFileSync(new URL("../src/shared/domain/" + name, import.meta.url), new URL("../../server/assets/" + name, import.meta.url));
 copyFileSync(new URL("../public/campus-map.json", import.meta.url), new URL("../../server/assets/campus-map.json", import.meta.url));
-copyFileSync(new URL("../shared/sports-catalog.json", import.meta.url), new URL("../../server/assets/sports.json", import.meta.url));
+copyFileSync(new URL("../src/shared/domain/sports-catalog.json", import.meta.url), new URL("../../server/assets/sports.json", import.meta.url));

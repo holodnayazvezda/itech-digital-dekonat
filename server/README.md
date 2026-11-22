@@ -40,7 +40,7 @@ Access-токен живёт 28 800 секунд. Сервер проверяе�
 | POST /notes/{note_id}/read | Сохраняет отметку о прочтении для владельца. Повторный запрос идемпотентен. Поле `notes[].read` в `/state` показывает сохранённое состояние |
 | GET /schedule | Личные занятия текущего участника. Сотрудник деканата видит все занятия выбранного периода. Параметры `start` и `end` задают даты включительно. Если задан только `start`, возвращает семь дней. Поля `canManage`, `revision`, `cancelled` и `changed` описывают доступ и состояние пары |
 | POST /teaching/lesson/{action} | `reschedule`, `cancel` или `homework`. Преподаватель управляет своими занятиями. Сотрудник деканата может менять занятия всех групп. Публикация создаёт уведомления |
-| GET /catalog | Каталог услуг из shared/services.js, признаки справок и обязательные поля. Для перевода перечислены программы, доступные конкретному студенту |
+| GET /catalog | Каталог услуг из синхронизированных серверных данных, признаки справок и обязательные поля. Для перевода перечислены программы, доступные конкретному студенту |
 | POST /request | Студент подаёт документ или бронь. Преподаватель подаёт бронь. Дискриминатор `kind` выбирает тело. Возвращает `id` и полную сохранённую карточку `record`. При сетевом сбое повторите запрос с тем же необязательным UUID `requestId`. Для того же владельца и содержимого сервер вернёт исходную карточку без второй заявки или уведомления. Другие параметры с тем же UUID вернут `409` |
 | POST /clarify | Сотрудник запрашивает дополнительные сведения по ожидающему документу |
 | POST /supplement | Владелец отвечает на уточнение и может заменить вложение. Документ возвращается в очередь с тем же ID |
@@ -117,10 +117,10 @@ Access-токен живёт 28 800 секунд. Сервер проверяе�
 Пример запуска двух независимых сервисов на Linux ниже. Сначала создайте каталоги для секретов и SQLite, доступные только сервисному пользователю. Следующие команды выполняются из корня репозитория. Пароль утилита запрашивает без вывода в терминал.
 
 ```sh
-server/.venv/bin/python -m server.database keygen /etc/campus/database.key
-server/.venv/bin/python -m server.account /etc/campus/accounts.json student
-server/.venv/bin/python -m server.account /etc/campus/accounts.json friend
-server/.venv/bin/python -m server.account /etc/campus/accounts.json office
+server/.venv/bin/python -m server.infrastructure.persistence.database keygen /etc/campus/database.key
+server/.venv/bin/python -m server.cli.account /etc/campus/accounts.json student
+server/.venv/bin/python -m server.cli.account /etc/campus/accounts.json friend
+server/.venv/bin/python -m server.cli.account /etc/campus/accounts.json office
 export CAMPUS_MODE=production
 export CAMPUS_ACCOUNTS_FILE=/etc/campus/accounts.json
 export CAMPUS_DEMO_DB=/var/lib/campus/atlas.sqlite
@@ -148,15 +148,15 @@ SQLite работает в режиме WAL. Изменение статусов
 
 SQLCipher шифрует страницы базы и журнала WAL с помощью AES-256 и проверяет их подлинность. Под защиту попадают в том числе тексты диалогов, отправители и получатели, заявки, содержимое вложений и ключи Web Push. Ключ базы создаётся из 32 случайных байтов. При потере ключа восстановление требует его резервной копии. Сервер расшифровывает данные для авторизованных запросов. Администратор с доступом к базе и ключу может прочитать переписку. Для сквозной конфиденциальности от оператора понадобился бы отдельный клиентский протокол. Синтетические учебные планы, оценки и справочники в поставляемых JSON и JS доступны вместе с исходниками. Реальные данные должны поступать через защищённое хранилище и авторизованные маршруты. [Устройство SQLCipher](https://www.zetetic.net/sqlcipher/design/)
 
-Новые пароли входа получают индивидуальную случайную соль и хеш Argon2id с памятью 64 МиБ, тремя проходами и одной линией параллелизма. Владельцы прежних scrypt-хешей сохраняют доступ. Чтобы перевести учётную запись на Argon2id, повторно задайте пароль через `server.account` и перезапустите API. Содержимое пароля не выводится. [Рекомендации OWASP](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html)
+Новые пароли входа получают индивидуальную случайную соль и хеш Argon2id с памятью 64 МиБ, тремя проходами и одной линией параллелизма. Владельцы прежних scrypt-хешей сохраняют доступ. Чтобы перевести учётную запись на Argon2id, повторно задайте пароль через `server.cli.account` и перезапустите API. Содержимое пароля не выводится. [Рекомендации OWASP](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html)
 
 ### Перенос открытой базы
 
 Остановите все процессы, меняющие исходную базу, включая исторический Node-прототип. На старом демостенде файл назывался `decanat-atlas-demo-v2.sqlite` в системном временном каталоге. Подготовьте закрытые каталоги. Ключ создайте один раз. Команды ниже выполняются из корня репозитория.
 
 ```sh
-server/.venv/bin/python -m server.database keygen /etc/campus/database.key
-server/.venv/bin/python -m server.database migrate /path/old.sqlite /var/lib/campus/atlas.sqlite --key /etc/campus/database.key
+server/.venv/bin/python -m server.infrastructure.persistence.database keygen /etc/campus/database.key
+server/.venv/bin/python -m server.infrastructure.persistence.database migrate /path/old.sqlite /var/lib/campus/atlas.sqlite --key /etc/campus/database.key
 ```
 
 Укажите новый путь в `CAMPUS_DEMO_DB`, а ключ — в `CAMPUS_DB_KEY_FILE`. Если Wi-Fi уже использовался, укажите в `CAMPUS_WIFI_KEY_FILE` прежний ключ Wi-Fi. Утилита читает согласованный снимок, проверяет подлинность страниц и целостность структуры, затем публикует новый файл. Существующий файл назначения защищён от перезаписи. Проверьте `/health`, историю заявок и сообщений и доступ к вложениям. До вывода исходного файла из эксплуатации он и его прежние резервные копии остаются читаемыми.
@@ -166,8 +166,8 @@ server/.venv/bin/python -m server.database migrate /path/old.sqlite /var/lib/cam
 Создайте отдельный ключ резервной копии и сохраните его в хранилище секретов. Штатный экспорт поддерживает работающий сервер в режиме WAL. Каждый снимок требует нового имени файла.
 
 ```sh
-server/.venv/bin/python -m server.database keygen /secure/keys/backup.key
-server/.venv/bin/python -m server.database backup /var/lib/campus/atlas.sqlite /backups/atlas-01.sqlite --source-key /etc/campus/database.key --key /secure/keys/backup.key
+server/.venv/bin/python -m server.infrastructure.persistence.database keygen /secure/keys/backup.key
+server/.venv/bin/python -m server.infrastructure.persistence.database backup /var/lib/campus/atlas.sqlite /backups/atlas-01.sqlite --source-key /etc/campus/database.key --key /secure/keys/backup.key
 ```
 
 Для восстановления остановите API и направьте его на проверенный снимок и соответствующий ключ. Восстановите также ключ Wi-Fi, конфигурацию аккаунтов и секрет подписи JWT из защищённых копий. Для смены ключа рабочей базы остановите запись, выполните ту же команду `backup` в новый файл с новым ключом назначения и переключите оба пути вместе. Храните ключи отдельно от передаваемых копий базы. [API и экспорт SQLCipher](https://www.zetetic.net/sqlcipher/sqlcipher-api/)
@@ -183,27 +183,25 @@ server/.venv/bin/python -m pytest -q server/tests
 
 | Модуль | Назначение |
 | --- | --- |
-| main.py, web.py | Запуск API, middleware, Swagger, вход и состояние кабинета, выдача готового клиента |
-| clock.py | Серверные дата и время по Москве, ответы clock и state |
-| request_routes.py | Маршруты подачи и обработки заявок, бронирования и скачивания документов |
-| communication_routes.py | Маршруты сообщений, чтения уведомлений, SSE и подписок браузера |
-| errors.py | Общий формат документированных ошибок HTTP |
-| models.py | Типы запросов, ответов и ошибок с описаниями полей OpenAPI |
-| auth.py, account.py | Проверка паролей, выпуск и проверка JWT, подготовка аккаунтов |
-| database.py | Зашифрованные соединения, создание ключей, перенос и резервное копирование |
-| store.py | Инициализация, начальные данные и транзакции SQLite |
-| requests.py | Правила обработки заявок и бронирования, вложения и PDF |
-| uploads.py | Общая проверка формата и размера вложений и аватаров |
-| housing.py, wifi.py | Личное проживание и начисления, шифрование сетевых реквизитов |
-| push.py, limits.py | Web Push, ограничение размера тела и частоты входа |
-| teaching.py, campus_routes.py | Персональные расписания, переносы, отмены и задания группам |
-| sports.py, office_tasks.py | Вместимость спортивных записей и задачи деканата |
-| irishka.py, assistant_*.py, mcp.py | Чаты Тинки, инструменты текущего кабинета, провайдер модели и MCP |
-| static/swagger/ | Swagger UI 5.35.1 и лицензии дистрибутива |
-| assets/ | Демоданные, шрифт DejaVu Sans для PDF и его лицензия |
+| `main.py`, `web.py` | Стабильные точки входа API и API вместе с клиентом |
+| `api/bootstrap.py`, `api/router.py` | Жизненный цикл, middleware, Swagger и сборка маршрутов |
+| `api/routes/` | Контроллеры кабинета, заявок, переписки, задач и ассистента |
+| `application/` | Прикладные сценарии, права операций и границы транзакций |
+| `assistant/` | Диалоги, агент и инструменты Тинки |
+| `contracts/models.py` | Контракты Pydantic для запросов и ответов |
+| `security/auth.py` | Пароли, JWT и проверка текущего пользователя |
+| `infrastructure/persistence/` | SQLCipher, схема, инициализация, соединения и копии |
+| `infrastructure/notifications/` | Доставка Web Push |
+| `infrastructure/ai/` | Подключение к внешней модели |
+| `infrastructure/security/` | Шифрование сетевых реквизитов |
+| `core/` | Пути, часы, ошибки, лимиты и контракт фоновых задач |
+| `cli/` | Утилиты аккаунтов и stdio MCP |
+| `assets/`, `static/` | Демоданные, PDF-шрифт и локальные ресурсы Swagger |
 
 ### Проживание и оплата общежития
 
 Поле `housing` в авторизованном ответе `GET /api/campus/state` содержит выделенное пользователю общежитие, комнату, дату начала и помесячные начисления. При отсутствии места возвращается `null`. Суммы указаны в рублях. Список `charges` содержит срок оплаты, начисленную и внесённую суммы и дату последнего поступления. Исходный демонстрационный лицевой счёт задан в `assets/campus.json` в коллекции `housing`. Банковская интеграция в прототипе отсутствует.
 
 Первичное заявление на заселение проходит через `POST /api/campus/request` и обычную очередь согласования. Заявка на рассмотрении или уточнении, а также уже предоставленное место исключают повторную подачу (HTTP 409). Одобрение открывает студенту карточку выбранного общежития с пустой историей начислений. Ремонт и поддержка доступны как отдельные виды обращений.
+
+Архитектура и границы модулей: [описание](../docs/architecture.md).

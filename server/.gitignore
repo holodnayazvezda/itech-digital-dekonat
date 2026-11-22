@@ -18,3 +18,5 @@ accounts.json
 private/
 *.sqlite*
 *.db
+
+.venv

@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { eventLanes } from "../src/timetable-layout.js";
+import { eventLanes } from "../src/features/schedule/timetable-layout.js";
 
 test("пересекающиеся занятия занимают разные колонки, следующая группа снова полную ширину",()=>{
   const events=[{id:"a",time:"09:00",end:"10:00"},{id:"b",time:"09:30",end:"10:30"},{id:"c",time:"10:00",end:"11:00"},{id:"d",time:"11:00",end:"12:00"}];

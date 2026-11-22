@@ -1,5 +1,5 @@
 import {test, expect} from "@playwright/test";
-import {rooms, numberTime, timeText} from "../../shared/campus-data.js";
+import {rooms, numberTime, timeText} from "../../src/shared/domain/campus-data.js";
 
 test("поиск в большом аудиторном фонде и бронь аудитории с частичного этажа", async ({page}, info) => {
   const room = rooms.find(r => r.short.startsWith("Б-") && r.floor === "5" && r.kind === "Аудитория");

@@ -37,7 +37,7 @@ codex mcp add tinki-campus --url http://127.0.0.1:8080/api/campus/mcp --bearer-t
 Запустите из корня репозитория с переменной `CAMPUS_MCP_TOKEN`:
 
 ```sh
-server/.venv/bin/python -m server.mcp
+server/.venv/bin/python -m server.cli.mcp
 ```
 
 `CAMPUS_MCP_ORIGIN` задаёт адрес кампуса. Значение по умолчанию `http://127.0.0.1:8000`. Для Docker укажите порт, на котором опубликован контейнер. Удалённый API требует HTTPS. Пример конфигурации хоста с путями к локальной установке:
@@ -47,7 +47,7 @@ server/.venv/bin/python -m server.mcp
   "mcpServers": {
     "irishka-campus": {
       "command": "/absolute/path/itech-digital-dekonat/server/.venv/bin/python",
-      "args": ["-m", "server.mcp"],
+      "args": ["-m", "server.cli.mcp"],
       "cwd": "/absolute/path/solution",
       "env": { "CAMPUS_MCP_ORIGIN": "http://127.0.0.1:8000" }
     }
@@ -56,3 +56,5 @@ server/.venv/bin/python -m server.mcp
 ```
 
 В stdio поиск называется `campus_irishka_search` и принимает, например, `{"query":{"query":"Маша","category":"people"}}`. Вход выполняется отдельно через API, вне каталога MCP. PDF и вложения возвращаются как embedded resources с MIME и base64.
+
+См. также [архитектуру приложения](architecture.md).

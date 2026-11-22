@@ -4,7 +4,7 @@ import {
   calendarFile,
   csvFile,
   exportRows,
-} from "../src/calendar-export.js";
+} from "../src/features/schedule/calendar-export.js";
 test("экспорт сохраняет московское время, UTF-8 и разделители iCalendar", () => {
   const event = {
     id: "пример",

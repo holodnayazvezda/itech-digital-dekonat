@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { searchScore } from '../shared/search.js';
+import { searchScore } from '../src/shared/domain/search.js';
 
 test('короткие имена находят полные формы, включая неоднозначное Саша',()=>{
   for(const [q,name] of [['маша','Рябова Мария Олеговна'],['катя','Екатерина Белова'],['саша','Александр Рощин'],['саша','Александра Рощина'],['маша ряб','Рябова Мария Олеговна']]) assert.ok(searchScore(q,name,{names:true})>0);

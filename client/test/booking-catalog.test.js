@@ -2,11 +2,11 @@ const today = "2026-11-20";
 import {readFileSync} from "node:fs";
 import test from "node:test";
 import assert from "node:assert/strict";
-import {bookingCatalogFromMap} from "../shared/booking-catalog.js";
-import {rooms, allClasses, roomActivities} from "../shared/campus-data.js";
-import {groupDirectory} from "../shared/university.js";
-import {weekOf} from "../shared/timetable.js";
-import catalog from "../shared/room-catalog.json" with { type: "json" };
+import {bookingCatalogFromMap} from "../src/shared/domain/booking-catalog.js";
+import {rooms, allClasses, roomActivities} from "../src/shared/domain/campus-data.js";
+import {groupDirectory} from "../src/shared/domain/university.js";
+import {weekOf} from "../src/shared/domain/timetable.js";
+import catalog from "../src/shared/domain/room-catalog.json" with { type: "json" };
 
 const load = path => JSON.parse(readFileSync(new URL(path, import.meta.url), "utf8"));
 const server = load("../../server/assets/campus.json");

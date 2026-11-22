@@ -1,8 +1,8 @@
 import { readFile, rename, unlink, writeFile } from "node:fs/promises";
 import { basename, join } from "node:path";
 import { randomUUID } from "node:crypto";
-import { parseAtlas } from "../src/campus-map.js";
-import { bookingCatalogFromMap } from "../shared/booking-catalog.js";
+import { parseAtlas } from "../src/features/navigation/campus-map.js";
+import { bookingCatalogFromMap } from "../src/shared/domain/booking-catalog.js";
 
 const [command, source, directory, ...extra] = process.argv.slice(2);
 try {

@@ -1,8 +1,8 @@
 const today = "2026-11-20";
 import test from "node:test";
 import assert from "node:assert/strict";
-import { people, personalClasses } from "../shared/campus-data.js";
-import { overlaps, weekOf } from "../shared/timetable.js";
+import { people, personalClasses } from "../src/shared/domain/campus-data.js";
+import { overlaps, weekOf } from "../src/shared/domain/timetable.js";
 
 test("отменённая пара не занимает интервал в расписании и бронировании", () => {
   const lesson = { date: today, time: "10:00", end: "11:30" };
