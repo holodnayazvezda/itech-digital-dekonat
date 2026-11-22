@@ -346,7 +346,7 @@ test("открытый кабинет показывает системное у
   } else {
     await expect(page.getByRole("status").filter({hasText:"пока кабинет открыт"})).toBeVisible();
   }
-  const office = await request.post("/api/campus/login", {data:{role: "office", password:"CampusDemo2026!"}});
+  const office = await request.post("/api/campus/login", {data:{role: "office", password:"OfficeHelp2026!"}});
   const {token} = await office.json();
   const subject = "Ответ деканата · " + testInfo.project.name;
   const result = await request.post("/api/campus/letter", {
@@ -475,7 +475,7 @@ test("первый экран дня и раскрытие списков с к�
 });
 
 test("очистка входящих синхронизируется между сеансами", async ({page, context, request}) => {
-  const office = await request.post("/api/campus/login", {data:{role: "office", password:"CampusDemo2026!"}});
+  const office = await request.post("/api/campus/login", {data:{role: "office", password:"OfficeHelp2026!"}});
   const token = (await office.json()).token;
   const sendLetter = async subject => {
     const result = await request.post("/api/campus/letter", {
@@ -532,7 +532,7 @@ test("тип события виден в расписании и карточк
 });
 
 test("общежития: студент без места открывает отдельную форму заселения", async ({ page }) => {
-  const response = await page.request.post("/api/campus/login", { data:{role: "friend" , password:"CampusDemo2026!"} });
+  const response = await page.request.post("/api/campus/login", { data:{role: "friend" , password:"NikitaStudy2026!"} });
   expect(response.ok()).toBe(true);
   const { token } = await response.json();
   await page.addInitScript(value => sessionStorage.setItem("atlas-session", value), token);

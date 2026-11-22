@@ -2,7 +2,7 @@ import { randomUUID } from "node:crypto";
 import { expect, test } from "@playwright/test";
 
 async function authorize(request, role) {
-  const session = await request.post("/api/campus/login", { data:{role, password:"CampusDemo2026!"} });
+  const session = await request.post("/api/campus/login", { data:{role, password: ({student:"ArinaStudy2026!",office:"OfficeHelp2026!",teacher:"VeraTeach2026!",friend:"NikitaStudy2026!","dean-data":"ElenaDean2026!"})[role]} });
   expect(session.ok()).toBe(true);
   const { token } = await session.json();
   return { Authorization: `Bearer ${token}` };

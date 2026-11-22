@@ -216,7 +216,7 @@ export function campusSession(notify, onLogout) {
     logout();
     const data = await api("login", {
       role: roleId,
-      password: password ?? (import.meta.env.VITE_CAMPUS_AUTH !== "password" ? demoAccess.password : undefined),
+      password: password ?? (import.meta.env.VITE_CAMPUS_AUTH !== "password" ? demoAccess.accounts.find(account => account.id === roleId)?.password : undefined),
     });
     token.value = data.token;
     sessionStorage.setItem("atlas-session", data.token);

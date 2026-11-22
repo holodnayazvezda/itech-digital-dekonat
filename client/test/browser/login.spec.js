@@ -7,7 +7,7 @@ test("вход с паролем, глазок и все демонстраци�
   await expect(password).toHaveAttribute("type","password");
   await page.getByRole("button",{name:"Показать пароль",exact:true}).click();
   await expect(password).toHaveAttribute("type","text");
-  await expect(password).toHaveValue("CampusDemo2026!");
+  await expect(password).toHaveValue("ArinaStudy2026!");
   await page.getByRole("button",{name:"Скрыть пароль",exact:true}).click();
   await password.fill("incorrect-password");
   const response=page.waitForResponse(r=>r.url().endsWith("/api/campus/login") && r.request().method()==="POST");
@@ -18,7 +18,7 @@ test("вход с паролем, глазок и все демонстраци�
     await page.getByRole("combobox",{name:"Демонстрационный пользователь",exact:true}).click();
     await page.getByRole("option").nth(["student","friend","teacher","dean-data","office"].indexOf(id)).click();
     await expect(username).toHaveValue(id);
-    await expect(password).toHaveValue("CampusDemo2026!");
+    await expect(password).toHaveValue(({student:"ArinaStudy2026!",friend:"NikitaStudy2026!",teacher:"VeraTeach2026!","dean-data":"ElenaDean2026!",office:"OfficeHelp2026!"})[id]);
     await expect(password).toHaveAttribute("type","password");
   }
   await page.getByRole("button",{name:"Войти",exact:true}).click();

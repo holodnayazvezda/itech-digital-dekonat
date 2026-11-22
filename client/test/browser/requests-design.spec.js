@@ -7,7 +7,7 @@ test("компактная история, серый статус, новое �
   const token=await page.evaluate(()=>sessionStorage.getItem("atlas-session"));
   const created=await page.request.post("/api/campus/request",{headers:{Authorization:"Bearer "+token},data:{kind:"document",name:"Справка об обучении",format:"Электронная",values:{destination:"Учебная библиотека"}}});
   expect(created.ok(),await created.text()).toBe(true);const record=await created.json();
-  const office=await page.request.post("/api/campus/login",{data:{role: "office", password:"CampusDemo2026!"}});
+  const office=await page.request.post("/api/campus/login",{data:{role: "office", password:"OfficeHelp2026!"}});
   const {token:officeToken}=await office.json();
   const decision=await page.request.post("/api/campus/decision",{headers:{Authorization:"Bearer "+officeToken},data:{id:record.id,status:"approved"}});
   expect(decision.ok()).toBe(true);

@@ -9,13 +9,13 @@ export default function LoginForm({
 }) {
   const demonstration = import.meta.env.VITE_CAMPUS_AUTH !== "password";
   const [identity, setIdentity] = useState(demonstration ? "student" : "");
-  const [password, setPassword] = useState(demonstration ? demo.password : "");
+  const [password, setPassword] = useState(demonstration ? demo.accounts.find(account => account.id === "student")?.password ?? "" : "");
   const [selected, setSelected] = useState("student");
   const [visible, setVisible] = useState(false);
   function choose(id) {
     setSelected(id);
     setIdentity(id);
-    setPassword(demo.password);
+    setPassword(demo.accounts.find(account => account.id === id)?.password ?? "");
     setVisible(false);
   }
   return <form className="login-form" onSubmit={event => {

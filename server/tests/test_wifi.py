@@ -27,7 +27,7 @@ def test_wifi_migration_reset_and_recovery(tmp_path, monkeypatch):
     store.database.export(tmp_path / "old.sqlite", db, db_key)
     with TestClient(main.app) as client:
         jwt = client.post(
-            "/api/campus/login", json={"role": "student", "password": "CampusDemo2026!"}
+            "/api/campus/login", json={"role": "student", "password": "ArinaStudy2026!"}
         ).json()["token"]
         headers = {"Authorization": "Bearer " + jwt}
         state = "/api/campus/state"
@@ -41,7 +41,7 @@ def test_wifi_migration_reset_and_recovery(tmp_path, monkeypatch):
         assert current["password"] != original
         assert before + 300_000 <= current["ready"] <= store.now() + 300_000
         office = client.post(
-            "/api/campus/login", json={"role": "office", "password": "CampusDemo2026!"}
+            "/api/campus/login", json={"role": "office", "password": "OfficeHelp2026!"}
         ).json()["token"]
         assert (
             client.post(

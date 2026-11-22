@@ -46,7 +46,7 @@ def test_existing_endpoint_survives_migration_and_another_cabinet(tmp_path, monk
             return {
                 "Authorization": "Bearer "
                 + client.post(
-                    "/api/campus/login", json={"role": user, "password": "CampusDemo2026!"}
+                    "/api/campus/login", json={"role": user, "password": demo_password(user)}
                 ).json()["token"]
             }
 
@@ -114,3 +114,10 @@ def test_existing_endpoint_survives_migration_and_another_cabinet(tmp_path, monk
             await stream.aclose()
 
         asyncio.run(replay())
+
+
+def demo_password(identity):
+    import json
+    from pathlib import Path
+    accounts = json.loads((Path(__file__).parents[1] / "assets/demo-access.json").read_text())["accounts"]
+    return next((a["password"] for a in accounts if a["id"] == identity), "invalid")

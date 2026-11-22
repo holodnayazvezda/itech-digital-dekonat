@@ -26,7 +26,7 @@ def client(tmp_path, monkeypatch):
 def login(c, name):
     return {
         "Authorization": "Bearer "
-        + c.post("/api/campus/login", json={"role": name, "password": "CampusDemo2026!"}).json()[
+        + c.post("/api/campus/login", json={"role": name, "password": demo_password(name)}).json()[
             "token"
         ]
     }
@@ -265,7 +265,7 @@ def test_week_and_role_specific_schedule(client):
     assert {r["group"] for r in get("teacher")} == {"АД-21", "АД-32"}
     assert (
         client.post(
-            "/api/campus/login", json={"role": "rector", "password": "CampusDemo2026!"}
+            "/api/campus/login", json={"role": "rector", "password": "invalid"}
         ).status_code
         == 401
     )
@@ -484,7 +484,7 @@ def test_demo_login_requires_password(client):
         response = client.post("/api/campus/login", json={"role": "student", "password": secret})
         assert response.status_code == 401
     assert client.post(
-        "/api/campus/login", json={"role": "student", "password": "CampusDemo2026!"}
+        "/api/campus/login", json={"role": "student", "password": "ArinaStudy2026!"}
     ).is_success
 
 
@@ -502,3 +502,19 @@ def test_server_clock_is_public_and_matches_state(client, monkeypatch):
         == expected
     )
     assert client.get("/api/campus/clock").headers["cache-control"] == "no-store"
+
+
+def demo_password(identity):
+    import json
+    from pathlib import Path
+    accounts = json.loads((Path(__file__).parents[1] / "assets/demo-access.json").read_text())["accounts"]
+    return next((a["password"] for a in accounts if a["id"] == identity), "invalid")
+
+
+def test_demo_passwords_are_individual(client):
+    identities = ["student", "friend", "teacher", "dean-data", "office"]
+    passwords = [demo_password(identity) for identity in identities]
+    assert len(set(passwords)) == len(identities)
+    for index, identity in enumerate(identities):
+        assert client.post("/api/campus/login", json={"role": identity, "password": passwords[index]}).status_code == 200
+        assert client.post("/api/campus/login", json={"role": identity, "password": passwords[(index + 1) % len(passwords)]}).status_code == 401

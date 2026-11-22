@@ -30,7 +30,7 @@ def campus(tmp_path, monkeypatch):
 
 def access(campus, owner):
     response = campus.post(
-        "/api/campus/login", json={"role": owner, "password": "CampusDemo2026!"}
+        "/api/campus/login", json={"role": owner, "password": demo_password(owner)}
     ).json()
     return {"Authorization": "Bearer " + response["token"]}
 
@@ -117,3 +117,10 @@ def test_delivery_rollback_on_partial_write(campus, monkeypatch):
             == 0
         )
         assert con.execute("SELECT count(*) FROM group_dispatches").fetchone()[0] == 0
+
+
+def demo_password(identity):
+    import json
+    from pathlib import Path
+    accounts = json.loads((Path(__file__).parents[1] / "assets/demo-access.json").read_text())["accounts"]
+    return next((a["password"] for a in accounts if a["id"] == identity), "invalid")

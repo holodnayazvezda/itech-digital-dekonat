@@ -49,8 +49,11 @@ def configuration():
             raise RuntimeError("Некорректный файл учётных записей")
     else:
         demo = json.loads((ASSETS / "demo-access.json").read_text())
-        hashed = password_hash(demo["password"])
-        credentials = dict.fromkeys(PEOPLE, hashed)
+        credentials = {
+            account["id"]: password_hash(account["password"])
+            for account in demo["accounts"]
+            if account["id"] in PEOPLE
+        }
     with connect() as con:
         return secret or con.execute(
             "SELECT value FROM settings WHERE name='demo_signing_key'"

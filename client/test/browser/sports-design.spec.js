@@ -45,7 +45,7 @@ test('30 видов спорта: поиск, разные окна, распи�
   const tokenStudent=await page.evaluate(()=>sessionStorage.getItem('atlas-session'));
   const state=await(await page.request.get('/api/campus/state',{headers:{Authorization:'Bearer '+tokenStudent}})).json();
   const saved=state.records.find(r=>r.id===id);expect(saved.sport).toBe('strength');expect(saved.short).toBe('СП-01');expect(saved.date).toBe(chosenDate);
-  const {token}=await(await page.request.post('/api/campus/login',{data:{role: 'office', password:"CampusDemo2026!"}})).json();
+  const {token}=await(await page.request.post('/api/campus/login',{data:{role: 'office', password:"OfficeHelp2026!"}})).json();
   const decision=await page.request.post('/api/campus/decision',{headers:{Authorization:'Bearer '+token},data:{id,status:'approved'}});expect(decision.ok(),await decision.text()).toBe(true);
   await page.reload();await expect(page.locator('.shell')).toBeVisible();await openSports();await page.getByRole('button',{name:'Силовые тренировки',exact:true}).click();await dateInput.fill(chosenDate);
   await expect(dialog.getByRole('button',{name:'09:00 · 11 мест свободно',exact:true})).toBeEnabled();
