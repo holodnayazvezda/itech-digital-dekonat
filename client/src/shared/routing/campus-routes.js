@@ -36,7 +36,7 @@ export const campusRoutes = [
     name: view,
     path,
     meta: { tab: view === "electives" ? 5 : 4, view },
-    
+
   })),
   { name: "not-found", path: "/:rest(.*)*" },
 ];
